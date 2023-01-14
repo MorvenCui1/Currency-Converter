@@ -1,0 +1,2651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Exchange Rates Data API - APILayer</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description" content="Real-Time, Intraday &amp; Historical Market Data API." />
+<link rel="shortcut icon" href="/assets/favicon.ico" />
+<meta name="google-signin-client_id" content="918427652626-8890ujna0olmp3mpuoms502b2uul2vug.apps.googleusercontent.com">
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@apilayer" />
+<meta name="twitter:creator" content="@apilayer" />
+<meta property="og:url" content="https://apilayer.com/marketplace/exchangerates_data-api" />
+<meta property="og:title" content="Exchange Rates Data API" />
+<meta property="og:description" content="Real-Time, Intraday &amp; Historical Market Data API." />
+<meta property="og:image" content="https://assets.apilayer.com/apis/large/exchangerates_data.png" />
+
+<link rel="stylesheet" href="/assets/vendor/font-awesome/css/all.min.css">
+<link rel="preload" href="/assets/fonts/open-sans-v34-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/open-sans-v34-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+
+<link rel="stylesheet" href="/assets/css/theme.css?7">
+<link rel="stylesheet" href="/assets/css/vendors.css?5">
+<link rel="stylesheet" href="/assets/css/custom.css">
+<link rel="canonical" href="https://apilayer.com/marketplace/exchangerates_data-api" />
+<link rel="stylesheet" href="/assets/css/playground.css?18" />
+<link rel="stylesheet" href="/assets/css/documentation.css?6" />
+<link rel="stylesheet" href="/assets/css/api.description.bundle.css" />
+<script type="application/ld+json"> 
+  {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "Exchange Rates Data API",
+    "image": "https://assets.apilayer.com/apis/exchangerates_data.png",
+    "description": "Real-Time, Intraday &amp; Historical Market Data API.",
+    "brand": {
+      "@type": "Brand",
+      "name": "APILayer"
+    },
+    "sku": "exchangerates_data",
+    
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.733333333333333",
+        "reviewCount": "15",
+        "bestRating": "5",
+        "worstRating": "1"
+    },
+    
+    "offers": [{
+        "@type": "AggregateOffer",
+        "url": "https://apilayer.com/marketplace/exchangerates_data-api",
+        "name": "Exchange Rates Data API",
+        "priceCurrency": "USD",
+        "highPrice": "79.99",
+        "lowPrice": "0.0"
+    }]
+  }
+  </script>
+
+
+<script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-NFD4MJP');
+    </script>
+
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFD4MJP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+</head>
+<body id="index2">
+
+<header id="header" class="header header-sticky-top left-aligned-navbar bg-white border-bottom z-index-999">
+<div id="cta-bar"></div>
+<div class="header-section py-0 py-lg-2">
+<div id="logoAndNav" class="container">
+
+<nav class="js-mega-menu navbar navbar-expand-lg">
+<div class="navbar-nav-wrap">
+
+<a class="navbar-brand navbar-nav-wrap-brand mr-lg-0" href="/" aria-label="APILayer">
+<img src="https://assets.apilayer.com/logo/logo.png" alt="APILayer | Hassle Free API Marketplace">
+</a>
+
+
+<div id="navBar" class="navbar-nav-wrap-navbar collapse navbar-collapse mx-lg-3">
+<ul class="navbar-nav">
+<li class="navbar-nav-item flex-grow-1 mr-2">
+<form class="input-group input-group-sm input-group-merge w-100" action="/marketplace/search">
+<div class="input-group">
+<input type="text" class="form-control rounded-pill" name="q" id="top-search-bar" placeholder="Search API..." aria-label="Search API..." required>
+<div class="input-group-append">
+<button type="submit" class="btn btn-pill btn-success"><i class="fas fa-search px-3"></i></button>
+</div>
+</div>
+</form>
+</li>
+<li class="nav-item mt-0 mt-xs-3">
+<a class="nav-link py-2" href="https://blog.apilayer.com" target="_blank" rel="noreferrer noopener">
+Blogs
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link py-2" href="/docs">
+Docs
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link py-2" href="/provider">
+List Your API
+</a>
+</li>
+</div>
+
+
+<div class="navbar-nav-wrap-content">
+
+<div class="d-inline-block ml-auto">
+<button id="signInButton" type="button" class="btn btn-sm btn-success d-none d-lg-inline-block transition-3d-hover js-hs-unfold-invoker" data-hs-unfold-options='{
+                  "target": "#sidebarContent",
+                  "type": "css-animation",
+                  "animationIn": "fadeInRight",
+                  "animationOut": "fadeOutRight",
+                  "hasOverlay": "rgba(55, 125, 255, 0.1)",
+                  "smartPositionOff": true
+                }' data-hs-unfold-target="#sidebarContent" data-hs-unfold-invoker="">Sign In</button>
+<a class="js-hs-unfold-invoker btn btn-icon btn-xs btn-ghost-secondary d-lg-none" href="javascript:;" data-hs-unfold-options='{
+                    "target": "#sidebarContent",
+                    "type": "css-animation",
+                    "animationIn": "fadeInRight",
+                    "animationOut": "fadeOutRight",
+                    "hasOverlay": "rgba(55, 125, 255, 0.1)",
+                    "smartPositionOff": true
+                  }' data-hs-unfold-target="#sidebarContent" data-hs-unfold-invoker="">
+<i class="fas fa-user-circle fa-2x"></i>
+</a>
+
+<button type="button" class="navbar-toggler navbar-nav-wrap-navbar-toggler btn btn-icon btn-sm rounded-circle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navBar" data-toggle="collapse" data-target="#navBar">
+<span class="navbar-toggler-default">
+<svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+<path fill="currentColor" d="M17.4,6.2H0.6C0.3,6.2,0,5.9,0,5.5V4.1c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,5.9,17.7,6.2,17.4,6.2z M17.4,14.1H0.6c-0.3,0-0.6-0.3-0.6-0.7V12c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,13.7,17.7,14.1,17.4,14.1z" />
+</svg>
+</span>
+<span class="navbar-toggler-toggled">
+<svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+<path fill="currentColor" d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z" />
+</svg>
+</span>
+</button>
+
+</div>
+
+</div>
+
+</div>
+</nav>
+
+</div>
+</div>
+</header>
+
+
+<main id="content" role="main">
+
+<div class="bg-light">
+<div class="container py-3">
+<div class="row justify-content-md-between align-items-md-center">
+<div class="col-md-8">
+<nav class="d-inline-block rounded" aria-label="breadcrumb">
+<ol class="breadcrumb breadcrumb-no-gutter font-size-1 mb-0" itemscope itemtype="https://schema.org/BreadcrumbList">
+<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+<a href="/" itemscope itemtype="http://schema.org/WebPage" itemprop="item" itemid="https://apilayer.com/">
+<span itemprop="name">API Marketplace</span>
+</a>
+<meta itemprop="position" content="1">
+</li>
+<li class="breadcrumb-item d-none d-md-block" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+<a href="/marketplace/category/currency" itemscope itemtype="http://schema.org/WebPage" itemprop="item" itemid="https://apilayer.com/marketplace/category/currency">
+<span itemprop="name">Currency</span>
+</a>
+<meta itemprop="position" content="2">
+</li>
+<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+<span itemprop="name">Exchange Rates Data API</span>
+<meta itemprop="position" content="3">
+</li>
+</ol>
+</nav>
+</div>
+</div>
+</div>
+</div>
+
+<style>
+      .introjs-tooltipbuttons a.introjs-button:hover {
+        color: #fff;
+      }
+    </style>
+
+<div class="container space-top-1">
+
+<div class="row mb-5">
+<div class="col-lg-6">
+<div class="card h-100 shadow-none">
+<div class="card-body p-0">
+<div class="row d-flex align-items-start">
+<div class="col-3 api-icon-bg">
+<img class="avatar-img w-100" src="https://assets.apilayer.com/apis/exchangerates_data.png" alt="Exchange Rates Data API">
+</div>
+<div class="col-9">
+<h1 class="h2 mb-3 text-primary">Exchange Rates Data API</h1>
+<div class="mb-5">Real-Time, Intraday &amp; Historical Market Data API.</div>
+
+<div class="d-flex justify-content-between align-items-center mb-5">
+<a class="media align-items-center" href="/">
+<div class="avatar avatar-xs mr-1">
+<img class="avatar-img" src="https://assets.apilayer.com/logo/square_large.png" alt="APILayer">
+</div>
+<div class="media-body font-size-1 text-body">
+APILayer
+</div>
+</a>
+<div class="d-flex align-items-center">
+<li class="list-inline-item mr-0"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="18"></li>
+<li class="list-inline-item mr-0"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="18"></li>
+<li class="list-inline-item mr-0"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="18"></li>
+<li class="list-inline-item mr-0"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="18"></li>
+<li class="list-inline-item mr-0"><img src="/assets/svg/illustrations/star-half.svg" alt="Review rating" width="18"></li>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div class="card-footer border-0 m-0 p-0">
+
+<div class="d-flex align-items-center">
+<button id="subscribeButton" type="button" class="right-menu btn btn-block btn-primary" onclick="loadPricing()">
+Subscribe for Free
+</button>
+<a data-next-url="/marketplace/live_demo?api=exchangerates_data" class="right-menu show-code btn btn-block btn-soft-primary d-none d-lg-block ml-3 mt-0">
+Live Demo</a>
+</div>
+
+</div>
+</div>
+</div>
+
+
+<div class="col-lg-6 mt-3 mt-lg-0">
+<iframe src="/marketplace/code/response?api_id=223&method=get&endpoint=/convert" data-src="" class="code-response fluid h-100 w-100 mb-3 mt-1 rounded border-0 d-none d-lg-block" rel="nofollow">
+          </iframe>
+</div>
+
+</div>
+
+
+<div class="row">
+<div class="col-12">
+
+<ul class="nav nav-classic" id="pills-tab" role="tablist">
+<li class="nav-item">
+<a class="nav-link font-weight-bold active" id="pricing-tab" data-toggle="tab" data-target="#pricing" type="button" role="tab" aria-controls="pricing" aria-selected="true">
+<div class="d-md-flex justify-content-md-center align-items-md-center">
+<span>Pricing</span>
+</div>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link font-weight-bold " id="details-tab" data-toggle="tab" data-target="#details" type="button" role="tab" aria-controls="details" aria-selected="false">
+<div class="d-md-flex justify-content-md-center align-items-md-center">
+<span>API info</span>
+</div>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link font-weight-bold" id="documentation-tab" data-toggle="tab" data-target="#documentation" type="button" role="tab" aria-controls="documentation" aria-selected="false">
+<div class="d-md-flex justify-content-md-center align-items-md-center">
+<span class="d-none d-md-block">Documentation</span>
+<span class="d-xs-block d-md-none">Docs</span>
+</div>
+</a>
+</li>
+</ul>
+
+
+<div class="tab-content" id="pills-tabContent">
+<div class="tab-pane active space-1" id="pricing" role="tabpanel" aria-labelledby="pricing-tab">
+
+<div class="row justify-content-around px-lg-2">
+<div class="plan col-sm-12 col-md-6 col-lg px-lg-1 mb-5">
+
+<div class="card  h-100 border overflow-hidden">
+
+<div class="card-header border-0  text-center d-block px-3">
+<span class="d-block h3">Free Plan</span>
+<span class="d-block mb-3">
+<span class="plan-price font-size-4 font-weight-bold text-primary">
+$0.00 </span>
+<span class="d-block font-size-1 mt-n1">Monthly</span>
+</span>
+
+<a data-next-url="/marketplace/checkout/exchangerates_data/free-plan/597" rel="nofollow" href="/marketplace/checkout/exchangerates_data/free-plan/597" class="btn btn-outline-primary btn-block transition-3d-hover">
+Subscribe
+</a>
+
+</div>
+
+
+<div class="card-body py-0 px-3">
+
+<div class="media font-size-1 text-body mb-3">
+<i class="fas fa-code text-success mt-1 mr-1"></i>
+<div class="media-body"> 250
+Requests / Monthly </div>
+</div>
+<div class="media font-size-1 text-body mb-3">
+<i class="fas fa-check-circle text-success mt-1 mr-1"></i>
+<div class="media-body"> Free for Lifetime </div>
+</div>
+<div class="media font-size-1 text-body mb-3">
+<i class="fas fa-check-circle text-success mt-1 mr-1"></i>
+<div class="media-body"> No Credit Card Required </div>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="plan col-sm-12 col-md-6 col-lg px-lg-1 mb-5">
+
+<div class="card bg-light h-100 border overflow-hidden">
+<div class="badge badge-secondary rounded-0 position-absolute w-100"><span>MOST POPULAR</span></div>
+
+<div class="card-header border-0  bg-light  text-center d-block px-3">
+<span class="d-block h3">Starter Plan</span>
+<span class="d-block mb-3">
+<span class="plan-price font-size-4 font-weight-bold text-primary">
+$9.99 </span>
+<span class="d-block font-size-1 mt-n1">Monthly</span>
+</span>
+
+<a data-next-url="/marketplace/checkout/exchangerates_data/starter-plan/598" rel="nofollow" href="/marketplace/checkout/exchangerates_data/starter-plan/598" class="btn btn-success btn-block transition-3d-hover">
+Subscribe
+</a>
+
+</div>
+
+
+<div class="card-body py-0 px-3">
+
+<div class="media font-size-1 text-body mb-3">
+<i class="fas fa-code text-success mt-1 mr-1"></i>
+<div class="media-body"> 10,000
+Requests / Monthly </div>
+</div>
+<div class="media font-size-1 text-body mb-3">
+<i class="fas fa-check-circle text-success mt-1 mr-1"></i>
+<div class="media-body"> Standard Support </div>
+</div>
+<div class="media font-size-1 text-body mb-3">
+<i class="fas fa-check-circle text-success mt-1 mr-1"></i>
+<div class="media-body"> Updated Every Minute </div>
+</div>
+<div class="media font-size-1 text-body mb-3">
+<i class="fas fa-check-circle text-success mt-1 mr-1"></i>
+<div class="media-body"> 200+ Currencies </div>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="plan col-sm-12 col-md-6 col-lg px-lg-1 mb-5">
+
+<div class="card  h-100 border overflow-hidden">
+
+<div class="card-header border-0  text-center d-block px-3">
+<span class="d-block h3">Pro Plan</span>
+<span class="d-block mb-3">
+<span class="plan-price font-size-4 font-weight-bold text-primary">
+$39.99 </span>
+<span class="d-block font-size-1 mt-n1">Monthly</span>
+</span>
+
+<a data-next-url="/marketplace/checkout/exchangerates_data/pro-plan/599" rel="nofollow" href="/marketplace/checkout/exchangerates_data/pro-plan/599" class="btn btn-outline-primary btn-block transition-3d-hover">
+Subscribe
+</a>
+
+</div>
+
+
+<div class="card-body py-0 px-3">
+
+<div class="media font-size-1 text-body mb-3">
+<i class="fas fa-code text-success mt-1 mr-1"></i>
+<div class="media-body"> 100,000
+Requests / Monthly </div>
+</div>
+<div class="media font-size-1 text-body mb-3">
+<i class="fas fa-check-circle text-success mt-1 mr-1"></i>
+<div class="media-body"> Standard Support </div>
+</div>
+<div class="media font-size-1 text-body mb-3">
+<i class="fas fa-check-circle text-success mt-1 mr-1"></i>
+<div class="media-body"> Updated Every Minute </div>
+</div>
+<div class="media font-size-1 text-body mb-3">
+<i class="fas fa-check-circle text-success mt-1 mr-1"></i>
+<div class="media-body"> 200+ Currencies </div>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="plan col-sm-12 col-md-6 col-lg px-lg-1 mb-5">
+
+<div class="card  h-100 border overflow-hidden">
+
+<div class="card-header border-0  text-center d-block px-3">
+<span class="d-block h3">Enterprise Plan</span>
+<span class="d-block mb-3">
+<span class="plan-price font-size-4 font-weight-bold text-primary">
+$79.99 </span>
+<span class="d-block font-size-1 mt-n1">Monthly</span>
+</span>
+
+<a data-next-url="/marketplace/checkout/exchangerates_data/enterprise-plan/600" rel="nofollow" href="/marketplace/checkout/exchangerates_data/enterprise-plan/600" class="btn btn-outline-primary btn-block transition-3d-hover">
+Subscribe
+</a>
+
+</div>
+
+
+<div class="card-body py-0 px-3">
+
+<div class="media font-size-1 text-body mb-3">
+<i class="fas fa-code text-success mt-1 mr-1"></i>
+<div class="media-body"> 500,000
+Requests / Monthly </div>
+</div>
+<div class="media font-size-1 text-body mb-3">
+<i class="fas fa-check-circle text-success mt-1 mr-1"></i>
+<div class="media-body"> Standard Support </div>
+</div>
+<div class="media font-size-1 text-body mb-3">
+<i class="fas fa-check-circle text-success mt-1 mr-1"></i>
+<div class="media-body"> Updated Every Minute </div>
+</div>
+<div class="media font-size-1 text-body mb-3">
+<i class="fas fa-check-circle text-success mt-1 mr-1"></i>
+<div class="media-body"> 200+ Currencies </div>
+</div>
+</div>
+
+
+</div>
+
+</div>
+<div class="col-sm-12 col-md-6 col-lg px-lg-1 mb-5 ">
+
+<div class="card h-100 border">
+
+<div class="card-header border-0 text-center d-block">
+<span class="d-block h3">Custom Plan</span>
+<span class="d-block mb-3">
+<span class="font-size-4 font-weight-bold text-primary">Volume</span>
+<span class="d-block font-size-1 mt-n1">Monthly</span>
+</span>
+<a class="btn btn-outline-primary btn-block transition-3d-hovers" href="/support" rel="nofollow">Contact
+Us</a>
+</div>
+
+
+<div class="card-body py-0 px-3">
+<div class="media font-size-1 mb-3">
+<i class="fas fa-check-circle text-success mt-1 mr-1"></i>
+<div class="media-body">
+Any requests volume you need
+</div>
+</div>
+<div class="media font-size-1 text-body mb-3">
+<i class="fas fa-check-circle text-success mt-1 mr-1"></i>
+<div class="media-body"> Updated Every Minute </div>
+</div>
+<div class="media font-size-1 text-body mb-3">
+<i class="fas fa-check-circle text-success mt-1 mr-1"></i>
+<div class="media-body"> 200+ Currencies </div>
+</div>
+</div>
+
+
+<div class="card-footer border-0 pt-0"></div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="tab-pane  space-1" id="details" role="tabpanel" aria-labelledby="details-tab">
+
+<article>
+<p>With over 15 exchange rate data sources, the Exchangerates API is delivering exchanging rates data for more than 170 world currencies. This API has several endpoints, where each of them serves a different purpose, use case. The endpoints include functionalities like receiving the latest exchange rates information for a specific set, or for all currencies; conversion from one to another currency; receiving data Time-series for multiple or for one currency, and preserving the API daily for the fluctuation data.</p>
+<h4>Available Endpoints</h4>
+<ul>
+<li><small class="badge badge-xs badge-primary mb-2 small font-size-1">/symbols</small> Returns all available currencies.</li>
+<li><small class="badge badge-xs badge-primary mb-2 small font-size-1">/latest</small> Returns exchange rate data in real-time for all available currencies or for a specific set.</li>
+<li><small class="badge badge-xs badge-primary mb-2 small font-size-1">/convert</small> With this endpoint, we have any amount conversion from one currency to another.</li>
+<li><small class="badge badge-xs badge-primary mb-2 small font-size-1">/{date}</small> Endpoint for receiving historical exchange rate information for all available currencies or for a set of currencies.</li>
+<li><small class="badge badge-xs badge-primary mb-2 small font-size-1">/timeseries</small> It returns the daily historical data for exchange rates, between two specified dates. The data can be returned for all available currency or for specified ones.</li>
+<li><small class="badge badge-xs badge-primary mb-2 small font-size-1">/fluctuation</small> This endpoint returns the fluctuation data between specified dates. The data can be for all available currencies or for a specific set.</li>
+</ul>
+<h4>Supported Symbols</h4>
+<p>The Fixer API comes with a constantly updated endpoint returning all available currencies. To access this list, make a request to the API's symbols endpoint.</p>
+<pre><code class="language-javascript">
+{
+  "success": true,
+  "symbols": {
+    "AED": "United Arab Emirates Dirham",
+    "AFN": "Afghan Afghani",
+    "ALL": "Albanian Lek",
+    "AMD": "Armenian Dram",
+    [...] 
+    }
+}
+</code></pre>
+<h4>Tips</h4>
+<p>To reduce bandwidth you can limit the number of output currencies to a specific set of your choice on most API endpoints. To do so, simply append the Fixer API's symbols parameter to your API request and set it to one or more comma-separated currency codes.</p>
+<pre><code class="language-shell">
+curl --request GET 'https://api.apilayer.com/exchangerates_data/live?base=USD&symbols=EUR,GBP' \
+--header 'apikey: YOUR API KEY'
+</code></pre>
+<p>It is also possible to convert currencies using historical exchange rate data. To do this, please also use the API's date parameter and set it to your preferred date. (format YYYY-MM-DD)</p>
+<pre><code class="language-shell">
+curl --request GET 'https://api.apilayer.com/currency_data/convert?base=USD&symbols=EUR,GBP,JPY&amount=5&date=2018-01-01' \
+--header 'apikey: YOUR API KEY'
+</code></pre>
+</article>
+
+
+
+</div>
+<div class="api-documentation tab-pane space-1" id="documentation" role="tabpanel" aria-labelledby="documentation-tab" style="min-height: 300px;">
+<div class="pt-1 mt-1 row">
+<div class="col-sm-12 col-lg-10 order-lg-2">
+<h3 class="mb-4">Exchange Rates Data API Reference</h3>
+<p>
+This API is organized around REST. Our API has predictable resource-oriented URLs,
+accepts form-encoded request bodies, returns JSON-encoded responses, and uses
+standard HTTP response codes, authentication, and verbs.
+</p>
+<blockquote class="blockquote bg-light">
+<h5 class="mb-2">Just Getting Started?</h5>
+<p>Check out our <a href="/docs/article/getting-started" target="_blank">development quickstart guide.</a></p>
+</blockquote>
+<h4 class="mb-4 mt-4"><a name="authentication">Authentication</a></h4>
+<p>
+Exchange Rates Data API uses API keys to authenticate requests. You can view and manage
+your API keys in the <a href="/account" target="_blank">Accounts page</a>.
+</p>
+<p>
+Your API keys carry many privileges, so be sure to keep them secure! Do not share
+your secret API keys in publicly accessible areas such as GitHub, client-side code,
+and so forth.
+</p>
+<p>
+All requests made to the API must hold a custom HTTP header named <strong>"apikey"</strong>.
+Implementation differs with each programming language. Below are some samples.
+</p>
+<p>
+All API requests must be made over HTTPS. Calls made over plain HTTP will fail.
+API requests without authentication will also fail.
+</p>
+<h4 class="mb-4 mt-4"><a name="endpoints">Endpoints</a></h4>
+<div id="endpointsAccordion" class="mb-7">
+
+<div class="card mb-3">
+<div class="card-header card-collapse" id="endpointHeading1">
+<h5 class="mb-0">
+<button type="button" class="btn btn-link btn-block d-flex justify-content-between card-btn p-3" data-toggle="collapse" data-target="#endpointCollapse1" aria-expanded="true" aria-controls="endpointCollapse1">
+<div>
+<i class="fas fa-angle-right"></i> <span class="text-uppercase">get</span> /convert
+</div>
+<span class="card-btn-toggle">
+<span class="card-btn-toggle-default">+</span>
+<span class="card-btn-toggle-active">−</span>
+</span>
+</button>
+</h5>
+</div>
+<div id="endpointCollapse1" class="endpoints-heading collapse show" aria-labelledby="endpointHeading1">
+
+<div class="card-body">
+<p class="pb-4">Currency conversion endpoint, which can be used to convert any amount from one currency to another. In order to convert currencies, please use the API's convert endpoint, append the from and to parameters and set them to your preferred base and target currency codes.</p>
+<h6 class="border-bottom pb-2">Parameters</h6>
+<div class="border-bottom border-bottom mt-3 pb-2">
+<p class="mb-2">
+<strong class="text-dark">amount</strong>
+<span class="text-dark font-weight-bold"> (required)</span>
+<br />
+</p>
+<p class="mb-1 pb-1">The amount to be converted.</p>
+<p>
+<span class="text-dark">Location: </span> <span class="text-muted">Query</span>,
+<span class="text-dark">Data Type: </span> <span class="text-muted">string</span>
+</p>
+</div>
+<div class="border-bottom border-bottom mt-3 pb-2">
+<p class="mb-2">
+<strong class="text-dark">from</strong>
+<span class="text-dark font-weight-bold"> (required)</span>
+<br />
+</p>
+<p class="mb-1 pb-1">The three-letter currency code of the currency you would like to convert from.</p>
+<p>
+<span class="text-dark">Location: </span> <span class="text-muted">Query</span>,
+<span class="text-dark">Data Type: </span> <span class="text-muted">string</span>
+</p>
+</div>
+<div class="border-bottom border-bottom mt-3 pb-2">
+<p class="mb-2">
+<strong class="text-dark">to</strong>
+<span class="text-dark font-weight-bold"> (required)</span>
+<br />
+</p>
+<p class="mb-1 pb-1">The three-letter currency code of the currency you would like to convert to.</p>
+<p>
+<span class="text-dark">Location: </span> <span class="text-muted">Query</span>,
+<span class="text-dark">Data Type: </span> <span class="text-muted">string</span>
+</p>
+</div>
+<div class="border-bottom border-bottom mt-3 pb-2">
+<p class="mb-2">
+<strong class="text-dark">date</strong>
+<span class="text-muted"> (optional)</span>
+<br />
+</p>
+<p class="mb-1 pb-1">Specify a date (format YYYY-MM-DD) to use historical rates for this conversion.</p>
+<p>
+ <span class="text-dark">Location: </span> <span class="text-muted">Query</span>,
+<span class="text-dark">Data Type: </span> <span class="text-muted">string</span>
+</p>
+</div>
+<iframe src="/marketplace/code/widget?api_id=223&method=get&endpoint=/convert" data-src="" class="fluid w-100 mb-3 mt-3 rounded border-0" style="height: 300px;" rel="nofollow">
+            </iframe>
+<div class="small mb-7">** A word enclosed with curly brackets "{ }" in the code
+means that it is a parameter and it should be replaced with your own values when
+executing. (also overwriting the curly brackets).
+</div>
+<h6 class="border-bottom pb-2 mb-2">Returns</h6>
+<p>Below is a sample response from the endpoint</p>
+<iframe src="/marketplace/code/response?api_id=223&method=get&endpoint=/convert" data-src="" class="code-response fluid w-100 mb-3 mt-1 rounded border-0" style="height:230px;" rel="nofollow">
+            </iframe>
+<hr />
+<p class="mb-4 pt-3 play-around-text d-none d-lg-block">
+If you wish to play around interactively with real values and run code, see...
+</p>
+<button type="button" class="play-around-button btn btn-sm btn-block btn btn-outline-primary d-none d-lg-block" data-toggle="modal" data-target="#tryNowModal" data-whatever="223,get,/convert">
+Live Demo
+</button>
+</div>
+</div>
+</div>
+
+
+<div class="card mb-3">
+<div class="card-header card-collapse" id="endpointHeading2">
+<h5 class="mb-0">
+<button type="button" class="btn btn-link btn-block d-flex justify-content-between card-btn p-3" data-toggle="collapse" data-target="#endpointCollapse2" aria-expanded="true" aria-controls="endpointCollapse2">
+<div>
+<i class="fas fa-angle-right"></i> <span class="text-uppercase">get</span> /fluctuation
+</div>
+<span class="card-btn-toggle">
+<span class="card-btn-toggle-default">+</span>
+<span class="card-btn-toggle-active">−</span>
+</span>
+</button>
+</h5>
+</div>
+<div id="endpointCollapse2" class="endpoints-heading collapse " aria-labelledby="endpointHeading2">
+
+<div class="card-body">
+<p class="pb-4">Fluctuation endpoint you will be able to retrieve information about how currencies fluctuate on a day-to-day basis. To use this feature, simply append a start_date and end_date and choose which currencies (symbols) you would like to query the API for. Please note that the maximum allowed timeframe is 365 days.</p>
+<h6 class="border-bottom pb-2">Parameters</h6>
+<div class="border-bottom border-bottom mt-3 pb-2">
+<p class="mb-2">
+<strong class="text-dark">end_date</strong>
+<span class="text-dark font-weight-bold"> (required)</span>
+<br />
+</p>
+<p class="mb-1 pb-1">The end date of your preferred timeframe.</p>
+<p>
+<span class="text-dark">Location: </span> <span class="text-muted">Query</span>,
+<span class="text-dark">Data Type: </span> <span class="text-muted">string</span>
+</p>
+</div>
+<div class="border-bottom border-bottom mt-3 pb-2">
+<p class="mb-2">
+<strong class="text-dark">start_date</strong>
+<span class="text-dark font-weight-bold"> (required)</span>
+<br />
+</p>
+<p class="mb-1 pb-1">The start date of your preferred timeframe.</p>
+<p>
+<span class="text-dark">Location: </span> <span class="text-muted">Query</span>,
+<span class="text-dark">Data Type: </span> <span class="text-muted">string</span>
+</p>
+</div>
+<div class="border-bottom border-bottom mt-3 pb-2">
+<p class="mb-2">
+<strong class="text-dark">base</strong>
+<span class="text-muted"> (optional)</span>
+<br />
+</p>
+<p class="mb-1 pb-1">Enter the three-letter currency code of your preferred base currency.</p>
+<p>
+<span class="text-dark">Location: </span> <span class="text-muted">Query</span>,
+<span class="text-dark">Data Type: </span> <span class="text-muted">string</span>
+</p>
+</div>
+<div class="border-bottom border-bottom mt-3 pb-2">
+<p class="mb-2">
+<strong class="text-dark">symbols</strong>
+<span class="text-muted"> (optional)</span>
+<br />
+</p>
+<p class="mb-1 pb-1">Enter a list of comma-separated currency codes to limit output currencies.</p>
+<p>
+<span class="text-dark">Location: </span> <span class="text-muted">Query</span>,
+<span class="text-dark">Data Type: </span> <span class="text-muted">string</span>
+</p>
+</div>
+<iframe src="/marketplace/code/widget?api_id=223&method=get&endpoint=/fluctuation" data-src="" class="fluid w-100 mb-3 mt-3 rounded border-0" style="height: 300px;" rel="nofollow">
+            </iframe>
+<div class="small mb-7">** A word enclosed with curly brackets "{ }" in the code
+means that it is a parameter and it should be replaced with your own values when
+executing. (also overwriting the curly brackets).
+</div>
+<h6 class="border-bottom pb-2 mb-2">Returns</h6>
+<p>Below is a sample response from the endpoint</p>
+<iframe src="/marketplace/code/response?api_id=223&method=get&endpoint=/fluctuation" data-src="" class="code-response fluid w-100 mb-3 mt-1 rounded border-0" style="height:230px;" rel="nofollow">
+            </iframe>
+<hr />
+<p class="mb-4 pt-3 play-around-text d-none d-lg-block">
+If you wish to play around interactively with real values and run code, see...
+</p>
+<button type="button" class="play-around-button btn btn-sm btn-block btn btn-outline-primary d-none d-lg-block" data-toggle="modal" data-target="#tryNowModal" data-whatever="223,get,/fluctuation">
+Live Demo
+</button>
+</div>
+</div>
+</div>
+
+
+<div class="card mb-3">
+<div class="card-header card-collapse" id="endpointHeading3">
+<h5 class="mb-0">
+<button type="button" class="btn btn-link btn-block d-flex justify-content-between card-btn p-3" data-toggle="collapse" data-target="#endpointCollapse3" aria-expanded="true" aria-controls="endpointCollapse3">
+<div>
+<i class="fas fa-angle-right"></i> <span class="text-uppercase">get</span> /latest
+</div>
+<span class="card-btn-toggle">
+<span class="card-btn-toggle-default">+</span>
+<span class="card-btn-toggle-active">−</span>
+</span>
+</button>
+</h5>
+</div>
+<div id="endpointCollapse3" class="endpoints-heading collapse " aria-labelledby="endpointHeading3">
+
+<div class="card-body">
+<p class="pb-4">Returns real-time exchange rate data updated every 60 minutes, every 10 minutes or every 60 seconds.</p>
+<h6 class="border-bottom pb-2">Parameters</h6>
+<div class="border-bottom border-bottom mt-3 pb-2">
+<p class="mb-2">
+<strong class="text-dark">base</strong>
+<span class="text-muted"> (optional)</span>
+<br />
+</p>
+<p class="mb-1 pb-1">Enter the three-letter currency code of your preferred base currency.</p>
+<p>
+<span class="text-dark">Location: </span> <span class="text-muted">Query</span>,
+<span class="text-dark">Data Type: </span> <span class="text-muted">string</span>
+</p>
+</div>
+<div class="border-bottom border-bottom mt-3 pb-2">
+<p class="mb-2">
+<strong class="text-dark">symbols</strong>
+<span class="text-muted"> (optional)</span>
+<br />
+</p>
+<p class="mb-1 pb-1">Enter a list of comma-separated currency codes to limit output currencies.</p>
+<p>
+<span class="text-dark">Location: </span> <span class="text-muted">Query</span>,
+<span class="text-dark">Data Type: </span> <span class="text-muted">string</span>
+</p>
+</div>
+<iframe src="/marketplace/code/widget?api_id=223&method=get&endpoint=/latest" data-src="" class="fluid w-100 mb-3 mt-3 rounded border-0" style="height: 300px;" rel="nofollow">
+            </iframe>
+<div class="small mb-7">** A word enclosed with curly brackets "{ }" in the code
+means that it is a parameter and it should be replaced with your own values when
+executing. (also overwriting the curly brackets).
+</div>
+<h6 class="border-bottom pb-2 mb-2">Returns</h6>
+<p>Below is a sample response from the endpoint</p>
+<iframe src="/marketplace/code/response?api_id=223&method=get&endpoint=/latest" data-src="" class="code-response fluid w-100 mb-3 mt-1 rounded border-0" style="height:230px;" rel="nofollow">
+            </iframe>
+<hr />
+<p class="mb-4 pt-3 play-around-text d-none d-lg-block">
+If you wish to play around interactively with real values and run code, see...
+</p>
+<button type="button" class="play-around-button btn btn-sm btn-block btn btn-outline-primary d-none d-lg-block" data-toggle="modal" data-target="#tryNowModal" data-whatever="223,get,/latest">
+Live Demo
+</button>
+</div>
+</div>
+</div>
+
+
+<div class="card mb-3">
+<div class="card-header card-collapse" id="endpointHeading4">
+<h5 class="mb-0">
+<button type="button" class="btn btn-link btn-block d-flex justify-content-between card-btn p-3" data-toggle="collapse" data-target="#endpointCollapse4" aria-expanded="true" aria-controls="endpointCollapse4">
+<div>
+<i class="fas fa-angle-right"></i> <span class="text-uppercase">get</span> /symbols
+</div>
+<span class="card-btn-toggle">
+<span class="card-btn-toggle-default">+</span>
+<span class="card-btn-toggle-active">−</span>
+</span>
+</button>
+</h5>
+</div>
+<div id="endpointCollapse4" class="endpoints-heading collapse " aria-labelledby="endpointHeading4">
+
+<div class="card-body">
+<p class="pb-4">Returning all available currencies.</p>
+<h6 class="border-bottom pb-2">Parameters</h6>
+<div class="text-muted mt-3 mb-4">No parameters.</div>
+<iframe src="/marketplace/code/widget?api_id=223&method=get&endpoint=/symbols" data-src="" class="fluid w-100 mb-3 mt-3 rounded border-0" style="height: 300px;" rel="nofollow">
+            </iframe>
+<h6 class="border-bottom pb-2 mb-2">Returns</h6>
+<p>Below is a sample response from the endpoint</p>
+<iframe src="/marketplace/code/response?api_id=223&method=get&endpoint=/symbols" data-src="" class="code-response fluid w-100 mb-3 mt-1 rounded border-0" style="height:230px;" rel="nofollow">
+            </iframe>
+<hr />
+<p class="mb-4 pt-3 play-around-text d-none d-lg-block">
+If you wish to play around interactively with real values and run code, see...
+</p>
+<button type="button" class="play-around-button btn btn-sm btn-block btn btn-outline-primary d-none d-lg-block" data-toggle="modal" data-target="#tryNowModal" data-whatever="223,get,/symbols">
+Live Demo
+</button>
+</div>
+</div>
+</div>
+
+
+<div class="card mb-3">
+<div class="card-header card-collapse" id="endpointHeading5">
+<h5 class="mb-0">
+<button type="button" class="btn btn-link btn-block d-flex justify-content-between card-btn p-3" data-toggle="collapse" data-target="#endpointCollapse5" aria-expanded="true" aria-controls="endpointCollapse5">
+<div>
+<i class="fas fa-angle-right"></i> <span class="text-uppercase">get</span> /timeseries
+</div>
+<span class="card-btn-toggle">
+<span class="card-btn-toggle-default">+</span>
+<span class="card-btn-toggle-active">−</span>
+</span>
+</button>
+</h5>
+</div>
+<div id="endpointCollapse5" class="endpoints-heading collapse " aria-labelledby="endpointHeading5">
+
+<div class="card-body">
+<p class="pb-4">Timeseries endpoint lets you query the API for daily historical rates between two dates of your choice, with a maximum time frame of 365 days.</p>
+<h6 class="border-bottom pb-2">Parameters</h6>
+<div class="border-bottom border-bottom mt-3 pb-2">
+<p class="mb-2">
+<strong class="text-dark">end_date</strong>
+<span class="text-dark font-weight-bold"> (required)</span>
+<br />
+</p>
+<p class="mb-1 pb-1">The end date of your preferred timeframe.</p>
+<p>
+<span class="text-dark">Location: </span> <span class="text-muted">Query</span>,
+<span class="text-dark">Data Type: </span> <span class="text-muted">string</span>
+</p>
+</div>
+<div class="border-bottom border-bottom mt-3 pb-2">
+<p class="mb-2">
+<strong class="text-dark">start_date</strong>
+<span class="text-dark font-weight-bold"> (required)</span>
+<br />
+</p>
+<p class="mb-1 pb-1">The start date of your preferred timeframe.</p>
+<p>
+<span class="text-dark">Location: </span> <span class="text-muted">Query</span>,
+<span class="text-dark">Data Type: </span> <span class="text-muted">string</span>
+</p>
+</div>
+<div class="border-bottom border-bottom mt-3 pb-2">
+<p class="mb-2">
+<strong class="text-dark">base</strong>
+<span class="text-muted"> (optional)</span>
+<br />
+</p>
+<p class="mb-1 pb-1">Enter the three-letter currency code of your preferred base currency.</p>
+<p>
+<span class="text-dark">Location: </span> <span class="text-muted">Query</span>,
+<span class="text-dark">Data Type: </span> <span class="text-muted">string</span>
+</p>
+</div>
+<div class="border-bottom border-bottom mt-3 pb-2">
+<p class="mb-2">
+<strong class="text-dark">symbols</strong>
+<span class="text-muted"> (optional)</span>
+<br />
+</p>
+<p class="mb-1 pb-1">Enter a list of comma-separated currency codes to limit output currencies.</p>
+<p>
+<span class="text-dark">Location: </span> <span class="text-muted">Query</span>,
+<span class="text-dark">Data Type: </span> <span class="text-muted">string</span>
+</p>
+</div>
+<iframe src="/marketplace/code/widget?api_id=223&method=get&endpoint=/timeseries" data-src="" class="fluid w-100 mb-3 mt-3 rounded border-0" style="height: 300px;" rel="nofollow">
+            </iframe>
+<div class="small mb-7">** A word enclosed with curly brackets "{ }" in the code
+means that it is a parameter and it should be replaced with your own values when
+executing. (also overwriting the curly brackets).
+</div>
+<h6 class="border-bottom pb-2 mb-2">Returns</h6>
+<p>Below is a sample response from the endpoint</p>
+<iframe src="/marketplace/code/response?api_id=223&method=get&endpoint=/timeseries" data-src="" class="code-response fluid w-100 mb-3 mt-1 rounded border-0" style="height:230px;" rel="nofollow">
+            </iframe>
+<hr />
+<p class="mb-4 pt-3 play-around-text d-none d-lg-block">
+If you wish to play around interactively with real values and run code, see...
+</p>
+<button type="button" class="play-around-button btn btn-sm btn-block btn btn-outline-primary d-none d-lg-block" data-toggle="modal" data-target="#tryNowModal" data-whatever="223,get,/timeseries">
+Live Demo
+</button>
+</div>
+</div>
+</div>
+
+
+<div class="card mb-3">
+<div class="card-header card-collapse" id="endpointHeading6">
+<h5 class="mb-0">
+<button type="button" class="btn btn-link btn-block d-flex justify-content-between card-btn p-3" data-toggle="collapse" data-target="#endpointCollapse6" aria-expanded="true" aria-controls="endpointCollapse6">
+<div>
+<i class="fas fa-angle-right"></i> <span class="text-uppercase">get</span> /{date}
+</div>
+<span class="card-btn-toggle">
+<span class="card-btn-toggle-default">+</span>
+<span class="card-btn-toggle-active">−</span>
+</span>
+</button>
+</h5>
+</div>
+<div id="endpointCollapse6" class="endpoints-heading collapse " aria-labelledby="endpointHeading6">
+
+<div class="card-body">
+<p class="pb-4">Historical rates are available for most currencies all the way back to the year of 1999. You can query the Fixer API for historical rates by appending a date (format YYYY-MM-DD) to the base URL.</p>
+<h6 class="border-bottom pb-2">Parameters</h6>
+<div class="border-bottom border-bottom mt-3 pb-2">
+<p class="mb-2">
+<strong class="text-dark">date</strong>
+<span class="text-dark font-weight-bold"> (required)</span>
+<br />
+</p>
+<p class="mb-1 pb-1">A date in the past for which historical rates are requested.</p>
+<p>
+<span class="text-dark">Location: </span> <span class="text-muted">Path</span>,
+<span class="text-dark">Data Type: </span> <span class="text-muted">string</span>
+</p>
+</div>
+<div class="border-bottom border-bottom mt-3 pb-2">
+<p class="mb-2">
+<strong class="text-dark">base</strong>
+<span class="text-muted"> (optional)</span>
+<br />
+</p>
+<p class="mb-1 pb-1">Enter the three-letter currency code of your preferred base currency.</p>
+<p>
+<span class="text-dark">Location: </span> <span class="text-muted">Query</span>,
+<span class="text-dark">Data Type: </span> <span class="text-muted">string</span>
+</p>
+</div>
+<div class="border-bottom border-bottom mt-3 pb-2">
+<p class="mb-2">
+<strong class="text-dark">symbols</strong>
+<span class="text-muted"> (optional)</span>
+<br />
+</p>
+<p class="mb-1 pb-1">Enter a list of comma-separated currency codes to limit output currencies.</p>
+<p>
+<span class="text-dark">Location: </span> <span class="text-muted">Query</span>,
+<span class="text-dark">Data Type: </span> <span class="text-muted">string</span>
+</p>
+</div>
+<iframe src="/marketplace/code/widget?api_id=223&method=get&endpoint=/{date}" data-src="" class="fluid w-100 mb-3 mt-3 rounded border-0" style="height: 300px;" rel="nofollow">
+            </iframe>
+<div class="small mb-7">** A word enclosed with curly brackets "{ }" in the code
+means that it is a parameter and it should be replaced with your own values when
+executing. (also overwriting the curly brackets).
+</div>
+<h6 class="border-bottom pb-2 mb-2">Returns</h6>
+<p>Below is a sample response from the endpoint</p>
+<iframe src="/marketplace/code/response?api_id=223&method=get&endpoint=/{date}" data-src="" class="code-response fluid w-100 mb-3 mt-1 rounded border-0" style="height:230px;" rel="nofollow">
+            </iframe>
+<hr />
+<p class="mb-4 pt-3 play-around-text d-none d-lg-block">
+If you wish to play around interactively with real values and run code, see...
+</p>
+<button type="button" class="play-around-button btn btn-sm btn-block btn btn-outline-primary d-none d-lg-block" data-toggle="modal" data-target="#tryNowModal" data-whatever="223,get,/{date}">
+Live Demo
+</button>
+</div>
+</div>
+</div>
+
+</div>
+<h4 class="mb-4 mt-4"><a name="rate-limits">Rate Limiting</a></h4>
+<p>
+Each subscription has its own rate limit. When you become a member, you start by choosing
+a rate limit that suits your usage needs. Do not worry; You can upgrade or downgrade your
+plan at any time. For this reason, instead of starting with a larger plan that you do
+not need, we can offer you to upgrade your plan after you start with "free" or "gold plan"
+options and start using the API.
+</p>
+<p>
+When you reach a rate limit (both daily and monthly), the service will stop responding and
+returning the HTTP 429 response status code (Too many requests) for each request with
+the following JSON string body text.
+</p>
+<pre><code class="language-javascript">{
+"message":"You have exceeded your daily\/monthly API rate limit. Please review and upgrade your subscription plan at https:\/\/apilayer.com\/subscriptions to continue."
+}</code></pre>
+<p></p>A reminder email will be sent to you when your API usage reaches both 80% and 90%, so
+that you can take immediate actions such as upgrading your plan in order to prevent your
+application using the API from being interrupted.
+</p>
+<p>You can also programmatically check your rate limit yourself. As a result of each request
+made to the APILayer, the following 4 fields provide you with all the necessary information
+within the HTTP Headers.
+</p>
+<p>
+<strong>x-ratelimit-limit-month:</strong> Request limit per month<br />
+<strong>x-ratelimit-remaining-month:</strong> Request limit remaining this month<br />
+<strong>x-ratelimit-limit-day:</strong> Request limit per day<br />
+<strong>x-ratelimit-remaining-day:</strong> Request limit remaining today<br />
+</p>
+<p>
+You can contact our <a href="/support" target="_blank">support unit</a> if you need any
+assistance with your application regarding to handle the returned result by looking at
+the header information.
+</p>
+<h4 class="mb-4 mt-4"><a name="errors">Error Codes</a></h4>
+<p>
+APILayer uses standard HTTP response codes to indicate the success or failure
+of an API request. In general: Codes in the 2xx range indicate success.
+Codes in the 4xx range indicate a clientside error, which means that failed
+given the information provided (e.g., a missing parameter, unauthorized access etc.).
+Codes in the 5xx range indicate an error with APILayer's servers (normally this
+should'nt happen at all).
+</p>
+<p>
+If the response code is not 200, it means the operation failed somehow and you may
+need to take an action accordingly. You can check the response (which will be in JSON format)
+for a field called <strong>'message'</strong> that briefly explains the error reported.
+</p>
+<p>
+<table class="table">
+<thead class="thead-light">
+<th>Status Code</th>
+<th>Explanation</th>
+</thead>
+<tbody>
+<tr>
+<td>400 - Bad Request</td>
+<td>The request was unacceptable, often due to missing a required parameter.</td>
+</tr>
+<tr>
+<td>401 - Unauthorized</td>
+<td>No valid API key provided.</td>
+</tr>
+<tr>
+<td>404 - Not Found</td>
+<td>The requested resource doesn't exist.</td>
+</tr>
+<tr>
+<td>429 - Too many requests</td>
+<td>API request limit exceeded. See section Rate Limiting for more info.</td>
+</tr>
+<tr>
+<td>5xx - Server Error</td>
+<td>We have failed to process your request. (You can contact us anytime)</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p>
+You can always <a href="/support" target="_blank">contact for support</a> and ask for more assistance. We'll be glad to assist you
+with building your product.
+</p>
+</div>
+<div class="col-lg-2 d-none d-lg-block font-size-1">
+<div class="sticky-top z-index-4" style="top:100px;">
+<span class="text-muted font-weight-bold">Contents:</span>
+<ul>
+<li><a href="#authentication">Authentication</a></li>
+<li><a href="#endpoints">Endpoints</a></li>
+<li><a href="#rate-limits">Rate Limiting</a></li>
+<li><a href="#errors">Error Codes</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+
+<div class="row">
+<div class="col-12">
+<div id="reviews" class="space-1">
+<h2 class="h1 text-primary">Reviews</h2>
+
+<div class="mb-7">
+<div class="row align-items-center">
+<div class="col-lg-4 mb-4 mb-lg-0">
+
+<div class="card bg-primary text-white text-center py-4 px-3">
+<span class="display-4">4.73</span>
+<ul class="list-inline mb-2">
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star-half.svg" alt="Review rating" width="22"></li>
+</ul>
+<span>API rating</span>
+</div>
+
+</div>
+<div class="col-lg-8">
+<ul class="list-unstyled list-sm-article mb-0">
+<li>
+
+<a class="d-flex align-items-center font-size-1" href="javascript:;">
+<div class="progress w-100" style="height: 8px;">
+<div class="progress-bar" role="progressbar" style="width: 86.66666666666667%;" aria-valuenow="64" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="d-flex align-items-center min-w-21rem ml-3">
+<ul class="list-inline mr-1 mb-2">
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="16"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="16"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="16"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="16"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="16"></li>
+</ul>
+<span>13</span>
+</div>
+</a>
+
+</li>
+<li>
+
+<a class="d-flex align-items-center font-size-1" href="javascript:;">
+<div class="progress w-100" style="height: 8px;">
+<div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="24" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="d-flex align-items-center min-w-21rem ml-3">
+<ul class="list-inline mr-1 mb-2">
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="16"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="16"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="16"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="16"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star-muted.svg" alt="Review rating" width="16"></li>
+</ul>
+<span>0</span>
+</div>
+</a>
+
+</li>
+<li>
+
+<a class="d-flex align-items-center font-size-1" href="javascript:;">
+<div class="progress w-100" style="height: 8px;">
+<div class="progress-bar" role="progressbar" style="width: 13.333333333333334%;" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="d-flex align-items-center min-w-21rem ml-3">
+<ul class="list-inline mr-1 mb-2">
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="16"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="16"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="16"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star-muted.svg" alt="Review rating" width="16"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star-muted.svg" alt="Review rating" width="16"></li>
+</ul>
+<span>2</span>
+</div>
+</a>
+
+</li>
+<li>
+
+<a class="d-flex align-items-center font-size-1" href="javascript:;">
+<div class="progress w-100" style="height: 8px;">
+<div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="3" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="d-flex align-items-center min-w-21rem ml-3">
+<ul class="list-inline mr-1 mb-2">
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="16"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="16"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star-muted.svg" alt="Review rating" width="16"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star-muted.svg" alt="Review rating" width="16"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star-muted.svg" alt="Review rating" width="16"></li>
+</ul>
+<span>0</span>
+</div>
+</a>
+
+</li>
+<li>
+
+<a class="d-flex align-items-center font-size-1" href="javascript:;">
+<div class="progress w-100" style="height: 8px;">
+<div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="d-flex align-items-center min-w-21rem ml-3">
+<ul class="list-inline mr-1 mb-2">
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="16"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star-muted.svg" alt="Review rating" width="16"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star-muted.svg" alt="Review rating" width="16"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star-muted.svg" alt="Review rating" width="16"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star-muted.svg" alt="Review rating" width="16"></li>
+</ul>
+<span>0</span>
+</div>
+</a>
+
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div class="row mb-2">
+<div class="col-lg-4 mb-3 mb-lg-0">
+
+<div class="media align-items-center">
+<div class="avatar avatar-circle mr-3">
+<img class="avatar-img" src="https://lh3.googleusercontent.com/a/ALm5wu3Ga2i4-7LiDuf-T9VrbZBQzZm_vGqJqt2gbS5bzw=s96-c" alt="Subash Ramesh">
+</div>
+<div class="media-body">
+<span class="d-block text-body font-size-1">3 weeks ago</span>
+<h4 class="mb-0">Subash Ramesh</h4>
+</div>
+</div>
+
+</div>
+<div class="col-lg-8">
+<ul class="list-inline mb-2">
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+</ul>
+<p>i like this one, its very usefull
+</p>
+</div>
+</div>
+
+<div class="font-size-1 offset-4">
+</div>
+
+
+
+<div class="row mb-2">
+<div class="col-lg-4 mb-3 mb-lg-0">
+
+<div class="media align-items-center">
+<div class="avatar avatar-circle mr-3">
+<img class="avatar-img" src="https://www.gravatar.com/avatar/3238b69f54843a170e8a1a9ea6312a5f?d=identicon&amp;s=128" alt="Scott Brown">
+</div>
+<div class="media-body">
+<span class="d-block text-body font-size-1">1 months ago</span>
+<h4 class="mb-0">Scott Brown</h4>
+</div>
+</div>
+
+</div>
+<div class="col-lg-8">
+<ul class="list-inline mb-2">
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+</ul>
+<p>Does exactly what it says it does and was what we needed for out project</p>
+</div>
+</div>
+
+<div class="font-size-1 offset-4">
+</div>
+
+
+
+<div class="row mb-2">
+<div class="col-lg-4 mb-3 mb-lg-0">
+
+<div class="media align-items-center">
+<div class="avatar avatar-circle mr-3">
+<img class="avatar-img" src="https://www.gravatar.com/avatar/a15fce62acd71742ada7e75ab7837916?d=identicon&amp;s=128" alt="TestApi">
+</div>
+<div class="media-body">
+<span class="d-block text-body font-size-1">1 months ago</span>
+<h4 class="mb-0">TestApi</h4>
+</div>
+</div>
+
+</div>
+<div class="col-lg-8">
+<ul class="list-inline mb-2">
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+</ul>
+<p>Works like a charm. It is very helpful.</p>
+</div>
+</div>
+
+<div class="font-size-1 offset-4">
+</div>
+
+
+
+<div class="row mb-2">
+<div class="col-lg-4 mb-3 mb-lg-0">
+
+<div class="media align-items-center">
+<div class="avatar avatar-circle mr-3">
+<img class="avatar-img" src="https://lh3.googleusercontent.com/a/ALm5wu2EINLVt9NDNh5kWY6Af6_36QoJ8MNYJwzdIXNI=s96-c" alt="Mike Raymond">
+</div>
+<div class="media-body">
+<span class="d-block text-body font-size-1">1 months ago</span>
+<h4 class="mb-0">Mike Raymond</h4>
+</div>
+</div>
+
+</div>
+<div class="col-lg-8">
+<ul class="list-inline mb-2">
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+</ul>
+<p>Thanks for your amazing services!</p>
+</div>
+</div>
+
+<div class="font-size-1 offset-4">
+</div>
+
+
+
+<div class="row mb-2">
+<div class="col-lg-4 mb-3 mb-lg-0">
+
+<div class="media align-items-center">
+<div class="avatar avatar-circle mr-3">
+<img class="avatar-img" src="https://lh3.googleusercontent.com/a/ALm5wu3lmnrDWAdCBl_DuEDH8lbkkcCj00JKpqzIsFUJhw=s96-c" alt="Peter Hamfelt">
+</div>
+<div class="media-body">
+<span class="d-block text-body font-size-1">1 months ago</span>
+<h4 class="mb-0">Peter Hamfelt</h4>
+</div>
+</div>
+
+</div>
+<div class="col-lg-8">
+<ul class="list-inline mb-2">
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+</ul>
+<p>The free plan works great</p>
+</div>
+</div>
+
+<div class="font-size-1 offset-4">
+</div>
+
+
+
+<div class="row mb-2">
+<div class="col-lg-4 mb-3 mb-lg-0">
+
+<div class="media align-items-center">
+<div class="avatar avatar-circle mr-3">
+<img class="avatar-img" src="https://www.gravatar.com/avatar/f1c7369a8f0173e5d4fb073315c28703?d=identicon&amp;s=128" alt="Youcef">
+</div>
+<div class="media-body">
+<span class="d-block text-body font-size-1">1 months ago</span>
+<h4 class="mb-0">Youcef</h4>
+</div>
+</div>
+
+</div>
+<div class="col-lg-8">
+<ul class="list-inline mb-2">
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+</ul>
+<p>Very good API, thank you so much :)</p>
+</div>
+</div>
+
+<div class="font-size-1 offset-4">
+</div>
+
+
+
+<div class="row mb-2">
+<div class="col-lg-4 mb-3 mb-lg-0">
+
+<div class="media align-items-center">
+<div class="avatar avatar-circle mr-3">
+<img class="avatar-img" src="https://lh3.googleusercontent.com/a/ALm5wu06J5bQsggpssxCNSWBOlIkIFWhtSKZNW5KIt2B=s96-c" alt="Klaudiusz K">
+</div>
+<div class="media-body">
+<span class="d-block text-body font-size-1">2 months ago</span>
+<h4 class="mb-0">Klaudiusz K</h4>
+</div>
+</div>
+
+</div>
+<div class="col-lg-8">
+<ul class="list-inline mb-2">
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+</ul>
+<p>Thanks, its very usefull for my tests laravel app.</p>
+</div>
+</div>
+
+<div class="font-size-1 offset-4">
+</div>
+
+
+
+<div class="row mb-2">
+<div class="col-lg-4 mb-3 mb-lg-0">
+
+<div class="media align-items-center">
+<div class="avatar avatar-circle mr-3">
+<img class="avatar-img" src="https://lh3.googleusercontent.com/a/ALm5wu1Mg2uKfwFBLcF9VJYzy0VjQv59M1ib3ahlv_CPzA=s96-c" alt="CHEIKH BEY GHALAOUI MOHAMED NEDHIR">
+</div>
+<div class="media-body">
+<span class="d-block text-body font-size-1">2 months ago</span>
+<h4 class="mb-0">CHEIKH BEY GHALAOUI MOHAMED NEDHIR</h4>
+</div>
+</div>
+
+</div>
+<div class="col-lg-8">
+<ul class="list-inline mb-2">
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+</ul>
+<p>Great API Thanks for your job
+</p>
+</div>
+</div>
+
+<div class="font-size-1 offset-4">
+</div>
+
+
+
+<div class="row mb-2">
+<div class="col-lg-4 mb-3 mb-lg-0">
+
+<div class="media align-items-center">
+<div class="avatar avatar-circle mr-3">
+<img class="avatar-img" src="https://lh3.googleusercontent.com/a/ALm5wu2KcHmuAxCvO5VZ-mT9Wm2Ind4UV6vA6pK3Plxx4g=s96-c" alt="Rusdi Kurniawan">
+</div>
+<div class="media-body">
+<span class="d-block text-body font-size-1">2 months ago</span>
+<h4 class="mb-0">Rusdi Kurniawan</h4>
+</div>
+</div>
+
+</div>
+<div class="col-lg-8">
+<ul class="list-inline mb-2">
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star-muted.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star-muted.svg" alt="Review rating" width="22"></li>
+</ul>
+<p>Any calculation what u need for exchange rate using api layer good 👍</p>
+</div>
+</div>
+
+<div class="font-size-1 offset-4">
+</div>
+
+
+
+<div class="row mb-2">
+<div class="col-lg-4 mb-3 mb-lg-0">
+
+<div class="media align-items-center">
+<div class="avatar avatar-circle mr-3">
+<img class="avatar-img" src="https://lh3.googleusercontent.com/a/ALm5wu33daRKkbQPsCJ0ZcBysuPwUg7hQw_a8XkS629N7w=s96-c" alt="Anil Revgade">
+</div>
+<div class="media-body">
+<span class="d-block text-body font-size-1">2 months ago</span>
+<h4 class="mb-0">Anil Revgade</h4>
+</div>
+</div>
+
+</div>
+<div class="col-lg-8">
+<ul class="list-inline mb-2">
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+</ul>
+<p>very good service &amp; api response is very fast</p>
+</div>
+</div>
+
+<div class="font-size-1 offset-4">
+</div>
+
+
+
+<div class="row mb-2">
+<div class="col-lg-4 mb-3 mb-lg-0">
+
+<div class="media align-items-center">
+<div class="avatar avatar-circle mr-3">
+<img class="avatar-img" src="https://lh3.googleusercontent.com/a/ALm5wu1cw-xO_XvvpyGTWQgdD_QP4w-EdhgEvYWBO98pgio=s96-c" alt="Alexey Kovalev">
+</div>
+<div class="media-body">
+<span class="d-block text-body font-size-1">2 months ago</span>
+<h4 class="mb-0">Alexey Kovalev</h4>
+</div>
+</div>
+
+</div>
+<div class="col-lg-8">
+<ul class="list-inline mb-2">
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+</ul>
+<p>Very useful and easy to use, especially for beginners like me</p>
+</div>
+</div>
+
+<div class="font-size-1 offset-4">
+</div>
+
+
+
+<div class="row mb-2">
+<div class="col-lg-4 mb-3 mb-lg-0">
+
+<div class="media align-items-center">
+<div class="avatar avatar-circle mr-3">
+<img class="avatar-img" src="https://lh3.googleusercontent.com/a/ALm5wu12LzJ5an2cZwoLVngdJg6yrd3x4t0ydHMVt5o9=s96-c" alt="Назар Баран">
+</div>
+<div class="media-body">
+<span class="d-block text-body font-size-1">2 months ago</span>
+<h4 class="mb-0">Назар Баран</h4>
+</div>
+</div>
+
+</div>
+<div class="col-lg-8">
+<ul class="list-inline mb-2">
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+</ul>
+<p>Good api for me and good website</p>
+</div>
+</div>
+
+<div class="font-size-1 offset-4">
+</div>
+
+
+
+<div class="row mb-2">
+<div class="col-lg-4 mb-3 mb-lg-0">
+
+<div class="media align-items-center">
+<div class="avatar avatar-circle mr-3">
+<img class="avatar-img" src="https://www.gravatar.com/avatar/fa3d8d18d2de5439e978b73ff83595d0?d=identicon&amp;s=128" alt="Ejiro Mrabure">
+</div>
+<div class="media-body">
+<span class="d-block text-body font-size-1">2 months ago</span>
+<h4 class="mb-0">Ejiro Mrabure</h4>
+</div>
+</div>
+
+</div>
+<div class="col-lg-8">
+<ul class="list-inline mb-2">
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+</ul>
+<p>Very effective, thank you very much</p>
+</div>
+</div>
+
+<div class="font-size-1 offset-4">
+</div>
+
+
+
+<div class="row mb-2">
+<div class="col-lg-4 mb-3 mb-lg-0">
+
+<div class="media align-items-center">
+<div class="avatar avatar-circle mr-3">
+<img class="avatar-img" src="https://www.gravatar.com/avatar/455d031db7e9455029f5f66c758a42bb?d=identicon&amp;s=128" alt="Allan Duong">
+</div>
+<div class="media-body">
+<span class="d-block text-body font-size-1">3 months ago</span>
+<h4 class="mb-0">Allan Duong</h4>
+</div>
+</div>
+
+</div>
+<div class="col-lg-8">
+<ul class="list-inline mb-2">
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+</ul>
+<p>We are using the API to get the latest exchange rates. Works like a charm.</p>
+</div>
+</div>
+
+<div class="font-size-1 offset-4">
+</div>
+
+
+
+<div class="row mb-2">
+<div class="col-lg-4 mb-3 mb-lg-0">
+
+<div class="media align-items-center">
+<div class="avatar avatar-circle mr-3">
+<img class="avatar-img" src="https://www.gravatar.com/avatar/741865ceeceb5c9fb6fef5e008c0948d?d=identicon&amp;s=128" alt="BOW">
+</div>
+<div class="media-body">
+<span class="d-block text-body font-size-1">6 months ago</span>
+<h4 class="mb-0">BOW</h4>
+</div>
+</div>
+
+</div>
+<div class="col-lg-8">
+<ul class="list-inline mb-2">
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star-muted.svg" alt="Review rating" width="22"></li>
+<li class="list-inline-item mr-1"><img src="/assets/svg/illustrations/star-muted.svg" alt="Review rating" width="22"></li>
+</ul>
+<p>i love it, it is very helpful</p>
+
+</div>
+</div>
+
+<div class="font-size-1 offset-4">
+</div>
+
+
+</div>
+</div>
+</div>
+
+
+<div class="row">
+<div class="col-12">
+<div id="related" class="space-1">
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+<h2 class="h1 text-primary">Related Products</h2>
+
+</div>
+
+<div class="row mx-n2">
+
+<div class="product col-sm-4 px-2 mb-5" data-category="all,,,scraping,">
+<div class="card shadow-none h-100">
+<a class="card-body p-0" href="/marketplace/scraper-api">
+<div class="media d-flex align-items-start">
+<div class="api-icon-bg avatar avatar-lg mr-3">
+<img class="avatar-img w-100 p-2" src="https://assets.apilayer.com/apis/scraper.png" alt="Scraper API (Lite Edition)">
+</div>
+<div class="media-body">
+<span class="d-block text-dark text-uppercase font-weight-bold font-size-1">Scraper API (Lite Edition)</span>
+<small class="d-block text-dark">Scraping</small>
+<div class="d-flex align-items-center">
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+
+
+<div class="product col-sm-4 px-2 mb-5" data-category="all,,,images,">
+<div class="card shadow-none h-100">
+<a class="card-body p-0" href="/marketplace/image_labeling-api">
+<div class="media d-flex align-items-start">
+<div class="api-icon-bg avatar avatar-lg mr-3">
+<img class="avatar-img w-100 p-2" src="https://assets.apilayer.com/apis/image_labeling.png" alt="Image Labeling API">
+</div>
+<div class="media-body">
+<span class="d-block text-dark text-uppercase font-weight-bold font-size-1">Image Labeling API</span>
+<small class="d-block text-dark">Images</small>
+<div class="d-flex align-items-center">
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+
+
+<div class="product col-sm-4 px-2 mb-5" data-category="all,,Featured,finance,">
+<div class="card shadow-none h-100">
+<a class="card-body p-0" href="/marketplace/bincheck-api">
+<div class="media d-flex align-items-start">
+<div class="api-icon-bg avatar avatar-lg mr-3">
+<img class="avatar-img w-100 p-2" src="https://assets.apilayer.com/apis/bincheck.png" alt="BIN Checker API">
+</div>
+<div class="media-body">
+<span class="d-block text-dark text-uppercase font-weight-bold font-size-1">BIN Checker API</span>
+<small class="d-block text-dark">Finance</small>
+<div class="d-flex align-items-center">
+<span class="badge badge-xs badge-light text-primary mt-1 mr-2"><i class="fas fa-star"></i>
+Featured
+</span>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+
+
+<div class="product col-sm-4 px-2 mb-5" data-category="all,,,scraping,">
+<div class="card shadow-none h-100">
+
+<a class="card-body p-0" href="https://reviewapi.com" target="_blank" rel="noopener">
+
+<div class="media d-flex align-items-start">
+<div class="api-icon-bg avatar avatar-lg mr-3">
+<img class="avatar-img w-100 p-2" src="https://assets.apilayer.com/apis/review.png" alt="Review API">
+</div>
+<div class="media-body">
+<span class="d-block text-dark text-uppercase font-weight-bold font-size-1">Review API</span>
+<small class="d-block text-dark">Scraping</small>
+<div class="d-flex align-items-center">
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+
+
+<div class="product col-sm-4 px-2 mb-5" data-category="all,,,finance,">
+<div class="card shadow-none h-100">
+
+<a class="card-body p-0" href="https://marketstack.com" target="_blank" rel="noopener">
+
+<div class="media d-flex align-items-start">
+<div class="api-icon-bg avatar avatar-lg mr-3">
+<img class="avatar-img w-100 p-2" src="https://assets.apilayer.com/apis/marketstack.png" alt="marketstack">
+</div>
+<div class="media-body">
+<span class="d-block text-dark text-uppercase font-weight-bold font-size-1">marketstack</span>
+<small class="d-block text-dark">Finance</small>
+<div class="d-flex align-items-center">
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+
+
+<div class="product col-sm-4 px-2 mb-5" data-category="all,,,food,">
+<div class="card shadow-none h-100">
+
+<a class="card-body p-0" href="https://apilayer.com/solution/nutrition" target="_blank" rel="noopener">
+
+<div class="media d-flex align-items-start">
+<div class="api-icon-bg avatar avatar-lg mr-3">
+<img class="avatar-img w-100 p-2" src="https://assets.apilayer.com/apis/nutrition.png" alt="Nutrition Analysis API">
+</div>
+<div class="media-body">
+<span class="d-block text-dark text-uppercase font-weight-bold font-size-1">Nutrition Analysis API</span>
+<small class="d-block text-dark">Food</small>
+<div class="d-flex align-items-center">
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+</main>
+
+
+
+<div id="tryNowModal" class="modal animated fade" tabindex="-1" role="dialog" aria-modal="true">
+<div class="modal-dialog modal-dialog-centered h-100 vh-100" role="document">
+<div class="modal-content h-100 bg-transparent" id="playgroundModalContent">
+<div class="modal-body">
+
+<button type="button" id="tryNowClose" class="btn btn-xs btn-icon btn-secondary text-right" data-dismiss="modal" aria-label="Close">
+<svg aria-hidden="true" width="10" height="10" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+<path fill="currentColor" d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z" />
+</svg>
+</button>
+
+<div class="row h-100">
+<div id="params" class="d-none d-lg-block col-lg-4 p-4 font-size-1 bg-light text-dark">
+<h4 class="mb-3"><i class="fas fa-caret-right"></i> Exchange Rates Data API Playground</h4>
+<div id="accordion" class="panel-group">
+<div class="endpoint-card card border mb-1 card-hover-shadow">
+<div class="card-header card-collapse" id="coursesHeading1638" ref="223,get,/convert">
+<a class="endpoint-name btn btn-link btn-sm btn-block card-btn collapsed p-3" href="javascript:;" role="button" data-toggle="collapse" data-target="#apiCollapse1638" aria-expanded="false" aria-controls="apiCollapse1638" ref="223,get,/convert">
+<span class="row">
+<span class="col-12">
+<span class="media">
+<span class="card-btn-toggle mr-3 ml-0">
+<span class="card-btn-toggle-default">&plus;</span>
+<span class="card-btn-toggle-active">&minus;</span>
+</span>
+<span class="font-size-1 mr-5">
+<span class="endpoint-method text-success">GET</span>
+<span class="endpoint-method">/convert</span>
+</span>
+</span>
+</span>
+</span>
+</a>
+</div>
+<div id="apiCollapse1638" ref="223,get,/convert" class="collapse" aria-labelledby="coursesHeading1638">
+<form class="js-validate endpoint-params-form" ref="223,get,/convert">
+<div class="card-body p-0">
+
+<div class="border-bottom pt-0 pr-3 pl-3 font-size-1 pb-0">
+<div class="form-group mb-5">
+<label class="col-form-label">amount:</label>
+<input type="text" class="param-input form-control" name="amount" required data-name="amount" data-param-in="query" placeholder="5" style="font-size: 14px;" />
+<span class="font-weight-bold font-size-0">REQUIRED:</span><span class="font-size-0">The amount to be converted.</span>
+</div>
+</div>
+
+
+<div class="border-bottom pt-0 pr-3 pl-3 font-size-1 pb-0">
+<div class="form-group mb-5">
+<label class="col-form-label">from:</label>
+<input type="text" class="param-input form-control" name="from" required data-name="from" data-param-in="query" placeholder="EUR" style="font-size: 14px;" />
+<span class="font-weight-bold font-size-0">REQUIRED:</span><span class="font-size-0">The three-letter currency code of the currency you would like to convert from.</span>
+</div>
+</div>
+
+
+<div class="border-bottom pt-0 pr-3 pl-3 font-size-1 pb-0">
+<div class="form-group mb-5">
+<label class="col-form-label">to:</label>
+<input type="text" class="param-input form-control" name="to" required data-name="to" data-param-in="query" placeholder="GBP" style="font-size: 14px;" />
+<span class="font-weight-bold font-size-0">REQUIRED:</span><span class="font-size-0">The three-letter currency code of the currency you would like to convert to.</span>
+</div>
+</div>
+
+
+<div class="border-bottom pt-0 pr-3 pl-3 font-size-1 pb-0">
+<div class="form-group mb-5">
+<label class="col-form-label">date:</label>
+<input type="text" class="param-input form-control" name="date" data-name="date" data-param-in="query" placeholder="2020-04-13" style="font-size: 14px;" />
+<span class="text-muted font-size-0">Specify a date (format YYYY-MM-DD) to use historical rates for this conversion.</span>
+</div>
+</div>
+
+</div>
+</form>
+</div>
+</div>
+<div class="endpoint-card card border mb-1 card-hover-shadow">
+<div class="card-header card-collapse" id="coursesHeading1640" ref="223,get,/fluctuation">
+<a class="endpoint-name btn btn-link btn-sm btn-block card-btn collapsed p-3" href="javascript:;" role="button" data-toggle="collapse" data-target="#apiCollapse1640" aria-expanded="false" aria-controls="apiCollapse1640" ref="223,get,/fluctuation">
+<span class="row">
+<span class="col-12">
+<span class="media">
+<span class="card-btn-toggle mr-3 ml-0">
+<span class="card-btn-toggle-default">&plus;</span>
+<span class="card-btn-toggle-active">&minus;</span>
+</span>
+<span class="font-size-1 mr-5">
+<span class="endpoint-method text-success">GET</span>
+<span class="endpoint-method">/fluctuation</span>
+</span>
+</span>
+</span>
+</span>
+</a>
+</div>
+<div id="apiCollapse1640" ref="223,get,/fluctuation" class="collapse" aria-labelledby="coursesHeading1640">
+<form class="js-validate endpoint-params-form" ref="223,get,/fluctuation">
+<div class="card-body p-0">
+
+<div class="border-bottom pt-0 pr-3 pl-3 font-size-1 pb-0">
+<div class="form-group mb-5">
+<label class="col-form-label">end_date:</label>
+<input type="text" class="param-input form-control" name="end_date" required data-name="end_date" data-param-in="query" placeholder="2020-04-14" style="font-size: 14px;" />
+<span class="font-weight-bold font-size-0">REQUIRED:</span><span class="font-size-0">The end date of your preferred timeframe.</span>
+</div>
+</div>
+
+
+<div class="border-bottom pt-0 pr-3 pl-3 font-size-1 pb-0">
+<div class="form-group mb-5">
+<label class="col-form-label">start_date:</label>
+<input type="text" class="param-input form-control" name="start_date" required data-name="start_date" data-param-in="query" placeholder="2020-04-13" style="font-size: 14px;" />
+<span class="font-weight-bold font-size-0">REQUIRED:</span><span class="font-size-0">The start date of your preferred timeframe.</span>
+</div>
+</div>
+
+
+<div class="border-bottom pt-0 pr-3 pl-3 font-size-1 pb-0">
+<div class="form-group mb-5">
+<label class="col-form-label">base:</label>
+<input type="text" class="param-input form-control" name="base" data-name="base" data-param-in="query" placeholder="EUR" style="font-size: 14px;" />
+<span class="text-muted font-size-0">Enter the three-letter currency code of your preferred base currency.</span>
+</div>
+</div>
+
+
+<div class="border-bottom pt-0 pr-3 pl-3 font-size-1 pb-0">
+<div class="form-group mb-5">
+<label class="col-form-label">symbols:</label>
+<input type="text" class="param-input form-control" name="symbols" data-name="symbols" data-param-in="query" placeholder="GBP,JPY,EUR" style="font-size: 14px;" />
+<span class="text-muted font-size-0">Enter a list of comma-separated currency codes to limit output currencies.</span>
+</div>
+</div>
+
+</div>
+</form>
+</div>
+</div>
+<div class="endpoint-card card border mb-1 card-hover-shadow">
+<div class="card-header card-collapse" id="coursesHeading1637" ref="223,get,/latest">
+<a class="endpoint-name btn btn-link btn-sm btn-block card-btn collapsed p-3" href="javascript:;" role="button" data-toggle="collapse" data-target="#apiCollapse1637" aria-expanded="false" aria-controls="apiCollapse1637" ref="223,get,/latest">
+<span class="row">
+<span class="col-12">
+<span class="media">
+<span class="card-btn-toggle mr-3 ml-0">
+<span class="card-btn-toggle-default">&plus;</span>
+<span class="card-btn-toggle-active">&minus;</span>
+</span>
+<span class="font-size-1 mr-5">
+<span class="endpoint-method text-success">GET</span>
+<span class="endpoint-method">/latest</span>
+</span>
+</span>
+</span>
+</span>
+</a>
+</div>
+<div id="apiCollapse1637" ref="223,get,/latest" class="collapse" aria-labelledby="coursesHeading1637">
+<form class="js-validate endpoint-params-form" ref="223,get,/latest">
+<div class="card-body p-0">
+
+<div class="border-bottom pt-0 pr-3 pl-3 font-size-1 pb-0">
+<div class="form-group mb-5">
+<label class="col-form-label">base:</label>
+<input type="text" class="param-input form-control" name="base" data-name="base" data-param-in="query" placeholder="EUR" style="font-size: 14px;" />
+<span class="text-muted font-size-0">Enter the three-letter currency code of your preferred base currency.</span>
+</div>
+</div>
+
+
+<div class="border-bottom pt-0 pr-3 pl-3 font-size-1 pb-0">
+<div class="form-group mb-5">
+<label class="col-form-label">symbols:</label>
+<input type="text" class="param-input form-control" name="symbols" data-name="symbols" data-param-in="query" placeholder="GBP,JPY,EUR" style="font-size: 14px;" />
+<span class="text-muted font-size-0">Enter a list of comma-separated currency codes to limit output currencies.</span>
+</div>
+</div>
+
+</div>
+</form>
+</div>
+</div>
+<div class="endpoint-card card border mb-1 card-hover-shadow">
+<div class="card-header card-collapse" id="coursesHeading1636" ref="223,get,/symbols">
+<a class="endpoint-name btn btn-link btn-sm btn-block card-btn collapsed p-3" href="javascript:;" role="button" data-toggle="collapse" data-target="#apiCollapse1636" aria-expanded="false" aria-controls="apiCollapse1636" ref="223,get,/symbols">
+<span class="row">
+<span class="col-12">
+<span class="media">
+<span class="card-btn-toggle mr-3 ml-0">
+<span class="card-btn-toggle-default">&plus;</span>
+<span class="card-btn-toggle-active">&minus;</span>
+</span>
+<span class="font-size-1 mr-5">
+<span class="endpoint-method text-success">GET</span>
+<span class="endpoint-method">/symbols</span>
+</span>
+</span>
+</span>
+</span>
+</a>
+</div>
+<div id="apiCollapse1636" ref="223,get,/symbols" class="collapse" aria-labelledby="coursesHeading1636">
+<form class="js-validate endpoint-params-form" ref="223,get,/symbols">
+<div class="card-body p-0">
+</div>
+</form>
+</div>
+</div>
+<div class="endpoint-card card border mb-1 card-hover-shadow">
+<div class="card-header card-collapse" id="coursesHeading1639" ref="223,get,/timeseries">
+<a class="endpoint-name btn btn-link btn-sm btn-block card-btn collapsed p-3" href="javascript:;" role="button" data-toggle="collapse" data-target="#apiCollapse1639" aria-expanded="false" aria-controls="apiCollapse1639" ref="223,get,/timeseries">
+<span class="row">
+<span class="col-12">
+<span class="media">
+<span class="card-btn-toggle mr-3 ml-0">
+<span class="card-btn-toggle-default">&plus;</span>
+<span class="card-btn-toggle-active">&minus;</span>
+</span>
+<span class="font-size-1 mr-5">
+<span class="endpoint-method text-success">GET</span>
+<span class="endpoint-method">/timeseries</span>
+</span>
+</span>
+</span>
+</span>
+</a>
+</div>
+<div id="apiCollapse1639" ref="223,get,/timeseries" class="collapse" aria-labelledby="coursesHeading1639">
+<form class="js-validate endpoint-params-form" ref="223,get,/timeseries">
+<div class="card-body p-0">
+
+<div class="border-bottom pt-0 pr-3 pl-3 font-size-1 pb-0">
+<div class="form-group mb-5">
+<label class="col-form-label">end_date:</label>
+<input type="text" class="param-input form-control" name="end_date" required data-name="end_date" data-param-in="query" placeholder="2020-04-14" style="font-size: 14px;" />
+<span class="font-weight-bold font-size-0">REQUIRED:</span><span class="font-size-0">The end date of your preferred timeframe.</span>
+</div>
+</div>
+
+
+<div class="border-bottom pt-0 pr-3 pl-3 font-size-1 pb-0">
+<div class="form-group mb-5">
+<label class="col-form-label">start_date:</label>
+<input type="text" class="param-input form-control" name="start_date" required data-name="start_date" data-param-in="query" placeholder="2020-04-13" style="font-size: 14px;" />
+<span class="font-weight-bold font-size-0">REQUIRED:</span><span class="font-size-0">The start date of your preferred timeframe.</span>
+</div>
+</div>
+
+
+<div class="border-bottom pt-0 pr-3 pl-3 font-size-1 pb-0">
+<div class="form-group mb-5">
+<label class="col-form-label">base:</label>
+<input type="text" class="param-input form-control" name="base" data-name="base" data-param-in="query" placeholder="EUR" style="font-size: 14px;" />
+<span class="text-muted font-size-0">Enter the three-letter currency code of your preferred base currency.</span>
+</div>
+</div>
+
+
+<div class="border-bottom pt-0 pr-3 pl-3 font-size-1 pb-0">
+<div class="form-group mb-5">
+<label class="col-form-label">symbols:</label>
+<input type="text" class="param-input form-control" name="symbols" data-name="symbols" data-param-in="query" placeholder="GBP,JPY,EUR" style="font-size: 14px;" />
+<span class="text-muted font-size-0">Enter a list of comma-separated currency codes to limit output currencies.</span>
+</div>
+</div>
+
+</div>
+</form>
+</div>
+</div>
+<div class="endpoint-card card border mb-1 card-hover-shadow">
+<div class="card-header card-collapse" id="coursesHeading1641" ref="223,get,/{date}">
+<a class="endpoint-name btn btn-link btn-sm btn-block card-btn collapsed p-3" href="javascript:;" role="button" data-toggle="collapse" data-target="#apiCollapse1641" aria-expanded="false" aria-controls="apiCollapse1641" ref="223,get,/{date}">
+<span class="row">
+<span class="col-12">
+<span class="media">
+<span class="card-btn-toggle mr-3 ml-0">
+<span class="card-btn-toggle-default">&plus;</span>
+<span class="card-btn-toggle-active">&minus;</span>
+</span>
+<span class="font-size-1 mr-5">
+<span class="endpoint-method text-success">GET</span>
+<span class="endpoint-method">/{date}</span>
+</span>
+</span>
+</span>
+</span>
+</a>
+</div>
+<div id="apiCollapse1641" ref="223,get,/{date}" class="collapse" aria-labelledby="coursesHeading1641">
+<form class="js-validate endpoint-params-form" ref="223,get,/{date}">
+<div class="card-body p-0">
+
+<div class="border-bottom pt-0 pr-3 pl-3 font-size-1 pb-0">
+<div class="form-group mb-5">
+<label class="col-form-label">date:</label>
+<input type="text" class="param-input form-control" name="date" required data-name="date" data-param-in="path" placeholder="2020-05-16" style="font-size: 14px;" />
+<span class="font-weight-bold font-size-0">REQUIRED:</span><span class="font-size-0">A date in the past for which historical rates are requested.</span>
+</div>
+</div>
+
+
+<div class="border-bottom pt-0 pr-3 pl-3 font-size-1 pb-0">
+<div class="form-group mb-5">
+<label class="col-form-label">base:</label>
+<input type="text" class="param-input form-control" name="base" data-name="base" data-param-in="query" placeholder="EUR" style="font-size: 14px;" />
+<span class="text-muted font-size-0">Enter the three-letter currency code of your preferred base currency.</span>
+</div>
+</div>
+
+
+<div class="border-bottom pt-0 pr-3 pl-3 font-size-1 pb-0">
+<div class="form-group mb-5">
+<label class="col-form-label">symbols:</label>
+<input type="text" class="param-input form-control" name="symbols" data-name="symbols" data-param-in="query" placeholder="GBP,JPY,EUR" style="font-size: 14px;" />
+<span class="text-muted font-size-0">Enter a list of comma-separated currency codes to limit output currencies.</span>
+</div>
+</div>
+
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-8 col-12 p-0 bg-dark text-white">
+<div class="col-12 font-size-1" id="code-editor">
+
+<div class="text-left">
+<div class="font-size-1 mb-2 pl-3"></div>
+<ul class="nav scrollbar-horizontal mb-2" role="tablist">
+<li class="nav-item">
+<a class="nav-link active" id="try-api-code-tab-1" data-toggle="pill" href="#try-js-code" role="tab" aria-controls="try-js-code" aria-selected="true">Javascript</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" id="try-api-code-tab-2" data-toggle="pill" href="#try-python-code" role="tab" aria-controls="try-python-code" aria-selected="false">Python</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" id="try-api-code-tab-3" data-toggle="pill" href="#try-php-code" role="tab" aria-controls="try-php-code" aria-selected="false">PHP</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" id="try-api-code-tab-4" data-toggle="pill" href="#try-go-code" role="tab" aria-controls="try-go-code" aria-selected="false">Go</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" id="try-api-code-tab-5" data-toggle="pill" href="#try-java-code" role="tab" aria-controls="try-java-code" aria-selected="false">Java</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" id="try-api-code-tab-6" data-toggle="pill" href="#try-ruby-code" role="tab" aria-controls="try-ruby-code" aria-selected="false">Ruby</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" id="try-api-code-tab-7" data-toggle="pill" href="#try-curl-code" role="tab" aria-controls="try-curl-code" aria-selected="false">cUrl</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" id="try-api-code-tab-8" data-toggle="pill" href="#try-c-sharp-code" role="tab" aria-controls="try-c-sharp-code" aria-selected="false">C#</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" id="try-api-code-tab-9" data-toggle="pill" href="#try-swift-code" role="tab" aria-controls="try-swift-code" aria-selected="false">Swift</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" id="try-api-code-tab-10" data-toggle="pill" href="#try-c-code" role="tab" aria-controls="try-kotlin-code" aria-selected="false">C</a>
+</li>
+</ul>
+</div>
+<input type="text" class="d-none" value="" id="api-code" />
+<div class="tab-content" id="code-panel">
+<a href="#" id="code-name" class="badge badge-secondary text-left">Displaying code for: <span class="code-name-inner"></span></a>
+<div class="tab-pane fade show active card bg-black mb-1" id="try-js-code" role="tabpanel" aria-labelledby="api-code-tab-1">
+<pre class="line-numbers"><code id="lang-javascript" class="language-javascript"></code></pre>
+</div>
+<div class="tab-pane fade show card bg-black mb-1" id="try-python-code" role="tabpanel" aria-labelledby="api-code-tab-2">
+<pre class="line-numbers"><code id="lang-python" class="language-python"></code></pre>
+</div>
+<div class="tab-pane fade show card bg-black mb-1" id="try-php-code" role="tabpanel" aria-labelledby="api-code-tab-3">
+<pre class="line-numbers"><code id="lang-php" class="language-php"></code></pre>
+</div>
+<div class="tab-pane fade show card bg-black mb-1" id="try-go-code" role="tabpanel" aria-labelledby="api-code-tab-4">
+<pre class="line-numbers"><code id="lang-go" class="language-go"></code></pre>
+</div>
+<div class="tab-pane fade show card bg-black mb-1" id="try-java-code" role="tabpanel" aria-labelledby="api-code-tab-5">
+<pre class="line-numbers"><code id="lang-java" class="language-java"></code></pre>
+</div>
+<div class="tab-pane fade show card bg-black mb-1" id="try-ruby-code" role="tabpanel" aria-labelledby="api-code-tab-6">
+<pre class="line-numbers"><code id="lang-ruby" class="language-ruby"></code></pre>
+</div>
+<div class="tab-pane fade show card bg-black mb-1" id="try-curl-code" role="tabpanel" aria-labelledby="api-code-tab-7">
+<pre class="line-numbers"><code id="lang-shell" class="language-shell"></code></pre>
+</div>
+<div class="tab-pane fade show card bg-black mb-1" id="try-c-sharp-code" role="tabpanel" aria-labelledby="api-code-tab-8">
+<pre class="line-numbers"><code id="lang-csharp" class="language-csharp"></code></pre>
+</div>
+<div class="tab-pane fade show card bg-black mb-1" id="try-swift-code" role="tabpanel" aria-labelledby="api-code-tab-9">
+<pre class="line-numbers"><code id="lang-swift" class="language-swift"></code></pre>
+</div>
+<div class="tab-pane fade show card bg-black mb-1" id="try-c-code" role="tabpanel" aria-labelledby="api-code-tab-10">
+<pre class="line-numbers"><code id="lang-c" class="language-c"></code></pre>
+</div>
+</div>
+
+</div>
+<div class="col-12 font-size-1">
+<div id="modal-run-toolbar" class="col-12 pr-0 pt-2">
+<button type="button" class="btn btn-sm btn-primary mr-3" id="run-code">
+<i class="fas fa-running"></i> Run Code
+</button>
+<span class="badge badge-danger" id="subsription-text"></span>
+</div>
+<div id="response-output" class="col-12 pr-0 pt-0 bg-dark">
+<div id="response-output-message" class="card bg-transparent">
+<div class="card-body">
+<h6 class="card-subtitle mb-2 text-muted">Please subscribe Exchange Rates Data API to run code<span class="code-name-inner d-none"></span></h6>
+<p class="card-text"><span id="free-tier-available" class="text-white font-weight-bold">FREE tier available</span> and no credit cards needed!</p>
+<button type="button" class="btn btn-md btn-danger mr-3 animated tada" id="sample-response-subscribe">
+Subscribe Now
+</button>
+</div>
+</div>
+
+
+<pre class="mt-0 mb-0 d-none" id="pre-output"><code class="language-javascript" id="code-output"></code></pre>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<footer class="bg-primary">
+<div class="container">
+<div class="space-top-2 space-bottom-1">
+<div class="row justify-content-lg-between">
+<div class="col-lg-3 mb-5">
+
+<a class="navbar-brand navbar-nav-wrap-brand mb-3" href="/" aria-label="APILayer">
+<img src="https://assets.apilayer.com/logo/white_large.png" alt="APILayer | Hassle Free API Marketplace">
+</a>
+
+<ul class="list-inline mb-5">
+<li class="list-inline-item">
+<a class="text-white font-size-2" href="https://twitter.com/apilayer/" rel="nofollow">
+<i class="fab fa-twitter"></i>
+</a>
+</li>
+<li class="list-inline-item">
+<a class="text-white font-size-2" href="https://www.facebook.com/apilayer/" rel="nofollow">
+ <i class="fab fa-facebook-f"></i>
+</a>
+</li>
+<li class="list-inline-item">
+<a class="text-white font-size-2" href="https://www.instagram.com/apilayer/" rel="nofollow">
+<i class="fab fa-instagram"></i>
+</a>
+</li>
+<li class="list-inline-item">
+<a class="text-white font-size-2" href="https://www.youtube.com/channel/UCwDncja3klyMhkKXWV1zoNQ" rel="nofollow">
+<i class="fab fa-youtube"></i>
+</a>
+</li>
+<li class="list-inline-item">
+<a class="text-white font-size-2" href="https://www.linkedin.com/company/apilayer/" rel="nofollow">
+<i class="fab fa-linkedin"></i>
+</a>
+</li>
+<li class="list-inline-item">
+<a class="text-white font-size-2" href="https://github.com/apilayer/" rel="nofollow">
+<i class="fab fa-github"></i>
+</a>
+</li>
+</ul>
+</div>
+<div class="col-lg-2 col-md-6 col-6 mb-5">
+<h5 class="text-white">Product</h5>
+
+<ul class="nav nav-sm nav-x-0 flex-column">
+<li class="nav-item"><a class="nav-link text-white" href="/">Marketplace</a></li>
+<li class="nav-item"><a class="nav-link text-white" href="/provider">List Your API</a></li>
+<li class="nav-item"><a class="nav-link text-white" href="/why-choose-apilayer">Why Choose Us</a></li>
+<li class="nav-item"><a class="nav-link text-white" href="/press">Press</a></li>
+</ul>
+
+</div>
+<div class="col-lg-2 col-md-6 col-6 mb-5">
+<h5 class="text-white">Docs & Help</h5>
+
+<ul class="nav nav-sm nav-x-0 flex-column">
+<li class="nav-item"><a class="nav-link text-white" href="/docs">Docs</a></li>
+<li class="nav-item"><a class="nav-link text-white" href="https://blog.apilayer.com/" target="_blank" rel="noreferrer noopener">Blog</a></li>
+<li class="nav-item"><a class="nav-link text-white" href="/docs/article/marketplace-faq">FAQs</a></li>
+<li class="nav-item"><a class="nav-link text-white" href="/docs/write-for-us">Write For Us</a></li>
+<li class="nav-item"><a class="nav-link text-white" href="https://blog.apilayer.com/api-glossary/" target="_blank" rel="noreferrer noopener">API Glossary</a></li>
+</ul>
+
+</div>
+<div class="col-lg-2 col-md-6 col-6 mb-5">
+<h5 class="text-white">Account</h5>
+
+<ul class="nav nav-sm nav-x-0 flex-column">
+<li class="nav-item"><a class="nav-link text-white js-hs-unfold-invoker" href="javascript:;" data-hs-unfold-options='{
+                "target": "#sidebarContent",
+                "type": "css-animation",
+                "animationIn": "fadeInRight",
+                "animationOut": "fadeOutRight",
+                "hasOverlay": "rgba(55, 125, 255, 0.1)",
+                "smartPositionOff": true
+              }' data-hs-unfold-target="#sidebarContent" data-hs-unfold-invoker="">Sign In</a></li>
+<li class="nav-item"><a class="nav-link text-white" href="/recover-password">Forgot Password</a></li>
+<li class="nav-item"><a class="nav-link text-white js-hs-unfold-invoker" href="javascript:;" data-hs-unfold-options='{
+                "target": "#sidebarContent",
+                "type": "css-animation",
+                "animationIn": "fadeInRight",
+                "animationOut": "fadeOutRight",
+                "hasOverlay": "rgba(55, 125, 255, 0.1)",
+                "smartPositionOff": true
+              }' data-hs-unfold-target="#sidebarContent" data-hs-unfold-invoker="">FREE Sign-up</a></li>
+</ul>
+
+</div>
+<div class="col-lg-2 col-md-6 col-6 mb-5">
+<h5 class="text-white">Get In Touch</h5>
+
+<ul class="nav nav-sm nav-x-0 flex-column">
+<li class="nav-item"><a class="nav-link text-white" href="/support">Support</a></li>
+<li class="nav-item"><a class="nav-link text-white" href="/contact-us">Contact Us</a></li>
+</ul>
+
+</div>
+
+<div class="col-lg-12 mx-auto">
+<ul class="nav nav-sm justify-content-center">
+<li class="nav-item"><a class="nav-link text-white py-0 border-right" href="https://www.ideracorp.com/legal/APILayer" target="_blank" rel="noreferrer noopener nofollow"><small>Imprint/Legal</small></a></li>
+<li class="nav-item"><a class="nav-link text-white py-0 border-right" href="https://www.ideracorp.com/Legal/APILayer/PrivacyStatement" target="_blank" rel="noreferrer noopener nofollow"><small>Privacy</small></a></li>
+<li class="nav-item"><a class="nav-link text-white py-0 border-right" href="https://www.ideracorp.com/Legal/Terms-of-Use" target="_blank" rel="noreferrer noopener nofollow"><small>Terms</small></a></li>
+<li class="nav-item"><a class="nav-link text-white py-0" href="https://www.ideracorp.com/Legal/APILayer/PrivacyStatement" target="_blank" rel="noreferrer noopener nofollow"><small>Cookie Preference</small></a></li>
+</ul>
+</div>
+
+
+<div class="col-lg-12 nav-sm">
+<p class="nav-link text-white text-center mb-0">© 2022 APILayer. All Rights Reserved. </p>
+</div>
+
+</div>
+</div>
+</div>
+</footer>
+
+
+
+<aside id="sidebarContent" class="hs-unfold-content sidebar hs-unfold-content-initialized hs-unfold-css-animation animated fadeInRight hs-unfold-hidden" data-hs-target-height="0" data-hs-unfold-content="" data-hs-unfold-content-animation-in="fadeInRight" data-hs-unfold-content-animation-out="fadeOutRight" style="animation-duration: 300ms;" afterOpen="signInCallback">
+<div class="sidebar-scroller">
+<div class="sidebar-container">
+<div class="sidebar-footer-offset" style="padding-bottom: 7rem;">
+
+<div class="d-flex justify-content-end align-items-center pt-4 px-4">
+<div class="hs-unfold">
+<a class="js-hs-unfold-invoker btn btn-icon btn-xs btn-soft-secondary" href="javascript:;" data-hs-unfold-options="{
+                  &quot;target&quot;: &quot;#sidebarContent&quot;,
+                  &quot;type&quot;: &quot;css-animation&quot;,
+                  &quot;animationIn&quot;: &quot;fadeInRight&quot;,
+                  &quot;animationOut&quot;: &quot;fadeOutRight&quot;,
+                  &quot;hasOverlay&quot;: &quot;rgba(55, 125, 255, 0.1)&quot;,
+                  &quot;smartPositionOff&quot;: true
+                }" data-hs-unfold-target="#sidebarContent" data-hs-unfold-invoker="">
+<svg width="10" height="10" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+<path fill="currentColor" d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z"></path>
+</svg>
+</a>
+</div>
+</div>
+
+
+<div class="scrollbar sidebar-body">
+<div class="sidebar-content py-2 px-4">
+ <form action="/signin" method="post" class="js-validate" novalidate="novalidate">
+<input type="hidden" name="csrf_token" value="IjE4NDUzMTQ4ZjRkZjY3ZTdhOTc4NDBkNzNjYmZlZmUwMDJlNTM5OTgi.Y6KIXQ.9FMEmEjz39IN3lo8QoABMEBjQdY" />
+<input type="hidden" name="next" value="" />
+
+<div id="loginSidebar" style="animation-duration: 400ms; opacity: 1;" data-hs-show-animation-target-group="idForm">
+
+<div class="text-center mb-4">
+<p class="lead mb-0">Sign in to APILayer</p>
+<small>Start by choosing an account or email you use.</small>
+</div>
+
+<a id="googleSignIn" class="btn btn-sm btn-outline-primary btn-block mb-2 border" href="#">
+<span class="d-flex justify-content-center align-items-center">
+<img class="mr-2" src="/assets/img/160x160/img17.png" alt="Sign in with Google" width="14" height="14">
+Sign in with Google
+</span>
+</a>
+<a class="btn btn-sm btn-outline-primary btn-block mb-2 border btn-github" href="/oauth/github" rel="nofollow">
+<span class="d-flex justify-content-center align-items-center">
+<i class="fab fa-github mr-2 text-dark"></i>
+Sign in with Github
+</span>
+</a>
+<div class="text-center mb-3">
+<span class="divider divider-xs divider-text">OR</span>
+</div>
+
+<div class="js-form-message form-group">
+<label class="input-label" for="signinEmail">Email address</label>
+<input type="email" class="form-control" name="email" id="signinEmail" placeholder="Email address" aria-label="Email address" required data-msg="Please enter a valid email address." value="">
+<div class="invalid-feedback"></div>
+</div>
+
+
+<div class="js-form-message form-group">
+<label class="input-label" for="signinPassword">
+<span class="d-flex justify-content-between align-items-center">
+Password
+<a class="link-underline text-capitalize font-weight-normal" href="/recover-password">Forgot Password?</a>
+</span>
+</label>
+<input type="password" class="form-control" name="password" id="signinPassword" placeholder="********" aria-label="********" required data-msg="Your password is invalid. Please try again.">
+<div class="invalid-feedback"></div>
+</div>
+
+
+<div class="align-items-center mb-3">
+<button type="submit" class="btn btn-sm btn-block btn-primary transition-3d-hover">
+<span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+Sign In
+</button>
+</div>
+
+<div class="text-center mb-3">
+<span class="divider divider-xs divider-text">OR</span>
+</div>
+<div class="text-center mb-2">
+<div class="mb-3 mb-sm-0">
+<span class="font-size-1 text-muted">Don't have an account?</span>
+<a class="font-size-1 font-weight-bold" href="/signup">Signup</a>
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+
+</div>
+
+<footer class="sidebar-footer border-top py-2 px-7">
+<ul class="nav nav-sm">
+<li class="nav-item">
+<a class="nav-link pl-0" href="https://www.ideracorp.com/Legal/APILayer/PrivacyStatement" target="_blank" rel="noreferrer noopener nofollow">Privacy</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://www.ideracorp.com/Legal/Terms-of-Use" target="_blank" rel="noreferrer noopener nofollow">Terms</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/about-us">
+<i class="fas fa-info-circle la-lg"></i>
+</a>
+</li>
+</ul>
+</footer>
+
+</div>
+</div>
+</aside>
+
+
+
+<a class="js-go-to go-to position-fixed" href="javascript:;" style="visibility: hidden;" data-hs-go-to-options='{
+      "offsetTop": 700,
+      "position": {
+        "init": {
+          "right": 15
+        },
+        "show": {
+          "bottom": 15
+        },
+        "hide": {
+          "bottom": -15
+        }
+      }
+    }'>
+<i class="fas fa-angle-up"></i>
+</a>
+
+
+<script src="/assets/js/bundles/vendors.js?9"></script>
+<script src="/assets/js/base.js?26"></script>
+<script src="https://apis.google.com/js/api:client.js"></script>
+
+<script>
+  window.signedin = false;
+  window.google_signin_client_id = "918427652626-8890ujna0olmp3mpuoms502b2uul2vug.apps.googleusercontent.com"
+  window.csrf_token = 'IjE4NDUzMTQ4ZjRkZjY3ZTdhOTc4NDBkNzNjYmZlZmUwMDJlNTM5OTgi.Y6KIXQ.9FMEmEjz39IN3lo8QoABMEBjQdY'
+  </script>
+<script src="/assets/js/oauth.js?50"></script>
+
+<script>
+    window.fusionchartsLicenseKey = "vtA3dB-11wF2A2H2A9C6E5A5F6B3E3E1G2C11tgoB4F1h1fdzoE6F4B-9jH-9D2I3B6A8B6E5G5B1C3D4A1C8B6D1D3D1rmoA32B2B9gC6B5G4zyhA9C5A5vraA2A1A1zbnE2D6G2E3E2B2C6D5C8B4E6aikC3A5RA5moB-9D3G4F2wqE4D2C2pzC1I2A3B-16hE1G3D1fvH4A6B7ueA4D4C3llC7PE7E4uufC2B2C4D8E6B4A3G2F3A28D2C7A6E7C-11==";
+  </script>
+<script>
+  window.assetsPath='/assets';
+  window.service_name='exchangerates_data';
+  window.seo_name='exchangerates_data-api';
+  window.api_id='223';
+  window.api_subscribed=false;
+</script>
+<script src="/assets/js/marketplace/playground.js?140"></script>
+<script src="/assets/js/marketplace/marketplace_v2.js?52"></script>
+<script src="/assets/js/marketplace/reviews.js"></script>
+<script src="/assets/js/bundles/api.description.bundle.js"></script>
+
+<script>
+    $(document).on('ready', function () {
+      NProgress.start();
+      init_slick_carousel();
+      init_rest();
+
+      
+      
+      
+
+      
+
+      startApp();
+       
+  init_clipboard();
+  init_prism();
+
+  $('button#sample-response-subscribe').click(function() {
+    $('#tryNowModal').modal('hide');
+    loadPricing();
+  });
+
+  if (typeof _learnq !== 'undefined') {
+    var item = {
+      "ProductName": 'Exchange Rates Data API',
+      "ProductID": '223',
+      "Categories": ['Currency'],
+      "ImageURL": 'https://assets.apilayer.com/apis/exchangerates_data.png',
+      "URL": 'https://apilayer.com/marketplace/exchangerates_data-api'
+    };
+  
+    _learnq.push(["track", "Viewed Product", item]);
+    _learnq.push(["trackViewedItem", {
+      "Title": item.ProductName,
+      "ItemId": item.ProductID,
+      "Categories": item.Categories,
+      "ImageUrl": item.ImageURL,
+      "Url": item.URL
+    }]);
+  }
+
+  
+
+  // align price decimal to top
+  $('.plan-price').each(function() {
+    var price = $(this).text();
+    var price_parts = price.split('.');
+    $(this).html(price_parts[0] + '<span class="font-size-2 align-top">.' + price_parts[1] + '</span>');
+  });
+
+      NProgress.done();
+    });
+  </script>
+
+<script>
+    if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="/assets/vendor/polifills.js"><\/script>');
+  </script>
+<script async type="text/javascript" src="//static.klaviyo.com/onsite/js/klaviyo.js?company_id=UhdPja"></script>
+<script>
+    var _learnq = _learnq || [];
+  </script>
+</body>
+</html>
