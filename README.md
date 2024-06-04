@@ -1,6 +1,6 @@
 # Currency-Converter
 
-Java program made with NetBeans and apilayer.com in order to convert to and from international currencies using real-time data.
+Java program made with NetBeans, apilayer.com, and JSON in order to convert to and from international currencies using real-time data.
 
 Collaborators: Aws Ali and Kyle Deng
 
