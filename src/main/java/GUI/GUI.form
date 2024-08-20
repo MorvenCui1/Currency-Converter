@@ -439,7 +439,7 @@
               <Font name="Segoe UI" size="24" style="1"/>
             </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="40">
+              <StringArray count="41">
                 <StringItem index="0" value="Canadian Dollar (CAD)"/>
                 <StringItem index="1" value="United Arab Emirates Dirham (AED)"/>
                 <StringItem index="2" value="Argentine Peso (ARS)"/>
@@ -453,33 +453,34 @@
                 <StringItem index="10" value="Danish Krone (DKK)"/>
                 <StringItem index="11" value="Dominican Peso (DOP)"/>
                 <StringItem index="12" value="EURO (EUR)"/>
-                <StringItem index="13" value="Hong Kong Dollar (HKD)"/>
-                <StringItem index="14" value="Indonesian Rupiah (IDR)"/>
-                <StringItem index="15" value="Indian Rupee (INR)"/>
-                <StringItem index="16" value="Jamaican Dollar (JMD)"/>
-                <StringItem index="17" value="Japanese Yen (JPY)"/>
-                <StringItem index="18" value="South Korean Won (KRW)"/>
-                <StringItem index="19" value="Kuwaiti Dinar (KWD)"/>
-                <StringItem index="20" value="Sri Lankan Rupee (LKR)"/>
-                <StringItem index="21" value="Moroccan Dirham (MAD)"/>
-                <StringItem index="22" value="Macau Pataca (MOP)"/>
-                <StringItem index="23" value="Mexican Peso (MXN)"/>
-                <StringItem index="24" value="Malaysian Ringgit (MYR)"/>
-                <StringItem index="25" value="Nigerian Naira (NGN)"/>
-                <StringItem index="26" value="Norweigan Kroner (NOK)"/>
-                <StringItem index="27" value="New Zealand Dollar (NZD)"/>
-                <StringItem index="28" value="Philippine Peso (PHP)"/>
-                <StringItem index="29" value="Pakistani Rupee (PKR)"/>
-                <StringItem index="30" value="Qatari Rial (QAR)"/>
-                <StringItem index="31" value="Russian Rouble (RUB)"/>
-                <StringItem index="32" value="Saudi Riyal (SAR)"/>
-                <StringItem index="33" value="Swedish Krona (SEK)"/>
-                <StringItem index="34" value="Singapore Dollar (SGD)"/>
-                <StringItem index="35" value="Thai Baht (THB)"/>
-                <StringItem index="36" value="Taiwan Dollar (TWD)"/>
-                <StringItem index="37" value="United States Dollar (USD)"/>
-                <StringItem index="38" value="Vietnamese Dong (VND)"/>
-                <StringItem index="39" value="South African Rand (ZAR)"/>
+                <StringItem index="13" value="Great British Pound (GBP)"/>
+                <StringItem index="14" value="Hong Kong Dollar (HKD)"/>
+                <StringItem index="15" value="Indonesian Rupiah (IDR)"/>
+                <StringItem index="16" value="Indian Rupee (INR)"/>
+                <StringItem index="17" value="Jamaican Dollar (JMD)"/>
+                <StringItem index="18" value="Japanese Yen (JPY)"/>
+                <StringItem index="19" value="South Korean Won (KRW)"/>
+                <StringItem index="20" value="Kuwaiti Dinar (KWD)"/>
+                <StringItem index="21" value="Sri Lankan Rupee (LKR)"/>
+                <StringItem index="22" value="Moroccan Dirham (MAD)"/>
+                <StringItem index="23" value="Macau Pataca (MOP)"/>
+                <StringItem index="24" value="Mexican Peso (MXN)"/>
+                <StringItem index="25" value="Malaysian Ringgit (MYR)"/>
+                <StringItem index="26" value="Nigerian Naira (NGN)"/>
+                <StringItem index="27" value="Norweigan Kroner (NOK)"/>
+                <StringItem index="28" value="New Zealand Dollar (NZD)"/>
+                <StringItem index="29" value="Philippine Peso (PHP)"/>
+                <StringItem index="30" value="Pakistani Rupee (PKR)"/>
+                <StringItem index="31" value="Qatari Rial (QAR)"/>
+                <StringItem index="32" value="Russian Rouble (RUB)"/>
+                <StringItem index="33" value="Saudi Riyal (SAR)"/>
+                <StringItem index="34" value="Swedish Krona (SEK)"/>
+                <StringItem index="35" value="Singapore Dollar (SGD)"/>
+                <StringItem index="36" value="Thai Baht (THB)"/>
+                <StringItem index="37" value="Taiwan Dollar (TWD)"/>
+                <StringItem index="38" value="United States Dollar (USD)"/>
+                <StringItem index="39" value="Vietnamese Dong (VND)"/>
+                <StringItem index="40" value="South African Rand (ZAR)"/>
               </StringArray>
             </Property>
           </Properties>
@@ -511,7 +512,7 @@
               <Font name="Segoe UI" size="24" style="1"/>
             </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="40">
+              <StringArray count="41">
                 <StringItem index="0" value="Canadian Dollar (CAD)"/>
                 <StringItem index="1" value="United Arab Emirates Dirham (AED)"/>
                 <StringItem index="2" value="Argentine Peso (ARS)"/>
@@ -525,33 +526,34 @@
                 <StringItem index="10" value="Danish Krone (DKK)"/>
                 <StringItem index="11" value="Dominican Peso (DOP)"/>
                 <StringItem index="12" value="EURO (EUR)"/>
-                <StringItem index="13" value="Hong Kong Dollar (HKD)"/>
-                <StringItem index="14" value="Indonesian Rupiah (IDR)"/>
-                <StringItem index="15" value="Indian Rupee (INR)"/>
-                <StringItem index="16" value="Jamaican Dollar (JMD)"/>
-                <StringItem index="17" value="Japanese Yen (JPY)"/>
-                <StringItem index="18" value="South Korean Won (KRW)"/>
-                <StringItem index="19" value="Kuwaiti Dinar (KWD)"/>
-                <StringItem index="20" value="Sri Lankan Rupee (LKR)"/>
-                <StringItem index="21" value="Moroccan Dirham (MAD)"/>
-                <StringItem index="22" value="Macau Pataca (MOP)"/>
-                <StringItem index="23" value="Mexican Peso (MXN)"/>
-                <StringItem index="24" value="Malaysian Ringgit (MYR)"/>
-                <StringItem index="25" value="Nigerian Naira (NGN)"/>
-                <StringItem index="26" value="Norweigan Kroner (NOK)"/>
-                <StringItem index="27" value="New Zealand Dollar (NZD)"/>
-                <StringItem index="28" value="Philippine Peso (PHP)"/>
-                <StringItem index="29" value="Pakistani Rupee (PKR)"/>
-                <StringItem index="30" value="Qatari Rial (QAR)"/>
-                <StringItem index="31" value="Russian Rouble (RUB)"/>
-                <StringItem index="32" value="Saudi Riyal (SAR)"/>
-                <StringItem index="33" value="Swedish Krona (SEK)"/>
-                <StringItem index="34" value="Singapore Dollar (SGD)"/>
-                <StringItem index="35" value="Thai Baht (THB)"/>
-                <StringItem index="36" value="Taiwan Dollar (TWD)"/>
-                <StringItem index="37" value="United States Dollar (USD)"/>
-                <StringItem index="38" value="Vietnamese Dong (VND)"/>
-                <StringItem index="39" value="South African Rand (ZAR)"/>
+                <StringItem index="13" value="Great British Pound (GBP)"/>
+                <StringItem index="14" value="Hong Kong Dollar (HKD)"/>
+                <StringItem index="15" value="Indonesian Rupiah (IDR)"/>
+                <StringItem index="16" value="Indian Rupee (INR)"/>
+                <StringItem index="17" value="Jamaican Dollar (JMD)"/>
+                <StringItem index="18" value="Japanese Yen (JPY)"/>
+                <StringItem index="19" value="South Korean Won (KRW)"/>
+                <StringItem index="20" value="Kuwaiti Dinar (KWD)"/>
+                <StringItem index="21" value="Sri Lankan Rupee (LKR)"/>
+                <StringItem index="22" value="Moroccan Dirham (MAD)"/>
+                <StringItem index="23" value="Macau Pataca (MOP)"/>
+                <StringItem index="24" value="Mexican Peso (MXN)"/>
+                <StringItem index="25" value="Malaysian Ringgit (MYR)"/>
+                <StringItem index="26" value="Nigerian Naira (NGN)"/>
+                <StringItem index="27" value="Norweigan Kroner (NOK)"/>
+                <StringItem index="28" value="New Zealand Dollar (NZD)"/>
+                <StringItem index="29" value="Philippine Peso (PHP)"/>
+                <StringItem index="30" value="Pakistani Rupee (PKR)"/>
+                <StringItem index="31" value="Qatari Rial (QAR)"/>
+                <StringItem index="32" value="Russian Rouble (RUB)"/>
+                <StringItem index="33" value="Saudi Riyal (SAR)"/>
+                <StringItem index="34" value="Swedish Krona (SEK)"/>
+                <StringItem index="35" value="Singapore Dollar (SGD)"/>
+                <StringItem index="36" value="Thai Baht (THB)"/>
+                <StringItem index="37" value="Taiwan Dollar (TWD)"/>
+                <StringItem index="38" value="United States Dollar (USD)"/>
+                <StringItem index="39" value="Vietnamese Dong (VND)"/>
+                <StringItem index="40" value="South African Rand (ZAR)"/>
               </StringArray>
             </Property>
           </Properties>

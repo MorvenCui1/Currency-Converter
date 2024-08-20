@@ -114,8 +114,6 @@ public class Functions {
             amounts.set(i, temp);
             heapify(i , 0);
         }
-
-        System.out.println("List of temperatures: " + amounts);
     }
     public void heapify(int n, int i){
         int MAX = i;
